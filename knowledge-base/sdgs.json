@@ -1,0 +1,19 @@
+[
+  { "id": 1, "title": "Erradicação da Pobreza", "officialColorHex": "#E5243B" },
+  { "id": 2, "title": "Fome Zero e Agricultura Sustentável", "officialColorHex": "#DDA63A" },
+  { "id": 3, "title": "Saúde e Bem-Estar", "officialColorHex": "#4C9F38" },
+  { "id": 4, "title": "Educação de Qualidade", "officialColorHex": "#C5192D" },
+  { "id": 5, "title": "Igualdade de Gênero", "officialColorHex": "#FF3A21" },
+  { "id": 6, "title": "Água Potável e Saneamento", "officialColorHex": "#26BDE2" },
+  { "id": 7, "title": "Energia Limpa e Acessível", "officialColorHex": "#FCC30B" },
+  { "id": 8, "title": "Trabalho Decente e Crescimento Econômico", "officialColorHex": "#A21942" },
+  { "id": 9, "title": "Indústria, Inovação e Infraestrutura", "officialColorHex": "#FD6925" },
+  { "id": 10, "title": "Redução das Desigualdades", "officialColorHex": "#DD1367" },
+  { "id": 11, "title": "Cidades e Comunidades Sustentáveis", "officialColorHex": "#FD9D24" },
+  { "id": 12, "title": "Consumo e Produção Responsáveis", "officialColorHex": "#BF8B2E" },
+  { "id": 13, "title": "Ação Contra a Mudança Global do Clima", "officialColorHex": "#3F7E44" },
+  { "id": 14, "title": "Vida na Água", "officialColorHex": "#0A97D9" },
+  { "id": 15, "title": "Vida Terrestre", "officialColorHex": "#56C02B" },
+  { "id": 16, "title": "Paz, Justiça e Instituições Eficazes", "officialColorHex": "#00689D" },
+  { "id": 17, "title": "Parcerias e Meios de Implementação", "officialColorHex": "#19486A" }
+]

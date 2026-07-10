@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Frameworks",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "subtitle", "origin", "type", "linearity", "description", "stages", "bestFor", "special", "sourceLicense"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z_]+$" },
+      "name": { "type": "string" },
+      "subtitle": { "type": "string" },
+      "origin": { "type": "string" },
+      "type": { "type": "string" },
+      "linearity": { "type": "string" },
+      "description": { "type": "string" },
+      "sigla": {
+        "type": ["array", "null"],
+        "items": {
+          "type": "object",
+          "required": ["letter", "meaning"],
+          "properties": {
+            "letter": { "type": "string" },
+            "meaning": { "type": "string" }
+          }
+        }
+      },
+      "stages": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+      "bestFor": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+      "special": { "type": "string" },
+      "sourceLicense": { "type": "string" }
+    },
+    "additionalProperties": false
+  },
+  "minItems": 1
+}

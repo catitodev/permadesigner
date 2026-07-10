@@ -1,0 +1,103 @@
+[
+  {
+    "id": "sun-shade",
+    "name": "Sol e Sombra",
+    "description": "Como a luz solar se move sobre o local ao longo do dia e das estações — a base de quase toda decisão de zoneamento e escolha de espécies.",
+    "guidingQuestions": [
+      "Em que direção o sol nasce e se põe em relação à área principal do projeto?",
+      "Quais áreas recebem sol pleno, sombra parcial ou sombra total, e isso muda entre verão e inverno?",
+      "Há sombreamento projetado por construções, muros ou árvores vizinhas que precise ser considerado?"
+    ],
+    "relatedPrincipleIds": [1, 7]
+  },
+  {
+    "id": "water",
+    "name": "Água",
+    "description": "Para onde a água vai quando chove, onde ela se acumula, onde falta — o padrão que mais frequentemente determina o sucesso ou fracasso de um design.",
+    "guidingQuestions": [
+      "Para onde escorre a água da chuva? Existem pontos baixos onde ela se acumula?",
+      "Há nascentes, córregos, poços ou corpos d'água próximos ao local?",
+      "Em que época do ano falta água, e em que época há excesso?",
+      "Existe alguma estrutura já feita para captar, deter ou infiltrar água no terreno?"
+    ],
+    "relatedPrincipleIds": [1, 2, 5, 7]
+  },
+  {
+    "id": "wind",
+    "name": "Vento",
+    "description": "Os ventos predominantes influenciam microclima, polinização, risco de incêndio e conforto térmico das construções.",
+    "guidingQuestions": [
+      "De que direção vêm os ventos predominantes, e isso muda entre estações?",
+      "Existem ventos fortes ou frios que precisam de quebra-vento?",
+      "Há corredores de vento (entre construções, ao longo de vales) que concentram o fluxo de ar?"
+    ],
+    "relatedPrincipleIds": [1, 7]
+  },
+  {
+    "id": "topography",
+    "name": "Topografia",
+    "description": "A forma do terreno — declividade, curvas de nível, pontos altos e baixos — condiciona onde a água, o ar frio e as pessoas naturalmente se movem.",
+    "guidingQuestions": [
+      "Qual é a declividade predominante do terreno, e em que direção ele desce?",
+      "Existem platôs, depressões, ravinas ou pontos notavelmente altos/baixos?",
+      "Onde o ar frio se acumula nas noites mais frias (bolsões de geada)?"
+    ],
+    "relatedPrincipleIds": [1, 7, 11]
+  },
+  {
+    "id": "soil",
+    "name": "Solo",
+    "description": "Textura, estrutura, vida biológica e histórico de uso do solo — a base física de qualquer sistema produtivo.",
+    "guidingQuestions": [
+      "Qual é a textura predominante do solo (arenoso, argiloso, siltoso) nas diferentes áreas?",
+      "Há sinais de erosão, compactação ou solo exposto?",
+      "Qual foi o uso anterior da terra (agricultura convencional, pastagem, mata, construção)?",
+      "Existem indicadores biológicos visíveis (minhocas, fungos, cobertura vegetal espontânea)?"
+    ],
+    "relatedPrincipleIds": [1, 5, 6, 10]
+  },
+  {
+    "id": "vegetation",
+    "name": "Vegetação Existente",
+    "description": "As plantas já presentes no local contam a história do lugar e frequentemente devem ser preservadas e integradas, não removidas.",
+    "guidingQuestions": [
+      "Quais espécies de árvores, arbustos ou plantas espontâneas já existem no local?",
+      "Há vegetação nativa remanescente que deveria ser protegida?",
+      "Existem árvores de grande porte cuja sombra, raízes ou queda de folhas influenciam o design?"
+    ],
+    "relatedPrincipleIds": [1, 7, 10]
+  },
+  {
+    "id": "wildlife",
+    "name": "Fauna",
+    "description": "Os animais silvestres e domésticos que já usam o local — aliados em potencial (polinizadores, predadores naturais) ou desafios a manejar.",
+    "guidingQuestions": [
+      "Que animais silvestres já foram observados no local (aves, insetos, mamíferos)?",
+      "Existem rotas de passagem de animais (corredores ecológicos) atravessando o terreno?",
+      "Há animais domésticos ou de criação que farão parte do sistema?"
+    ],
+    "relatedPrincipleIds": [1, 8, 10]
+  },
+  {
+    "id": "edges",
+    "name": "Bordas e Ecótonos",
+    "description": "As zonas de transição — entre floresta e clareira, entre água e terra, entre propriedades — costumam ser as mais produtivas e diversas do sistema.",
+    "guidingQuestions": [
+      "Onde estão as bordas naturais do local (transição floresta/campo, água/terra, sol/sombra)?",
+      "Essas bordas já são usadas de forma produtiva, ou estão negligenciadas?",
+      "Existem bordas administrativas (cercas, divisas) que também merecem virar bordas produtivas?"
+    ],
+    "relatedPrincipleIds": [1, 7, 11]
+  },
+  {
+    "id": "human-use",
+    "name": "Uso Humano Atual",
+    "description": "Como pessoas já se movem, trabalham e vivem no local hoje — o design regenerativo parte do que já funciona, não de uma folha em branco.",
+    "guidingQuestions": [
+      "Quais caminhos as pessoas já percorrem naturalmente no terreno?",
+      "Quais áreas já são usadas para convívio, trabalho, cultivo ou descanso?",
+      "Existem estruturas, infraestrutas ou instalações existentes que devem ser mantidas, adaptadas ou removidas?"
+    ],
+    "relatedPrincipleIds": [1, 3, 8]
+  }
+]

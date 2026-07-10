@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NaturePatterns",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "description", "guidingQuestions", "relatedPrincipleIds"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z-]+$" },
+      "name": { "type": "string" },
+      "description": { "type": "string" },
+      "guidingQuestions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+      "relatedPrincipleIds": {
+        "type": "array",
+        "items": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "minItems": 1
+      }
+    },
+    "additionalProperties": false
+  },
+  "minItems": 1
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Principles",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "description", "guidingQuestion", "colorToken"],
+    "properties": {
+      "id": { "type": "integer", "minimum": 1, "maximum": 12 },
+      "name": { "type": "string" },
+      "description": { "type": "string" },
+      "guidingQuestion": { "type": "string" },
+      "colorToken": { "type": "string" }
+    },
+    "additionalProperties": false
+  },
+  "minItems": 12,
+  "maxItems": 12
+}
