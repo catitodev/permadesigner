@@ -27,7 +27,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="mx-auto w-full max-w-4xl overflow-auto px-4 py-8">
-      <div className="mb-8 flex items-center justify-between">
+      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold tracking-tight">Meus Projetos</h1>
           <p className="text-sm text-muted-foreground">
