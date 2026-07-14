@@ -1,86 +1,86 @@
 [
   {
     "id": 1,
-    "name": "Observar e Interagir",
-    "description": "Um bom design depende de um relacionamento contínuo e recíproco com a paisagem e as pessoas, observando com cuidado antes de agir.",
-    "guidingQuestion": "O que este lugar, essas pessoas ou este sistema já estão me mostrando, antes de eu propor qualquer mudança?",
+    "name": { "pt-BR": "Observar e Interagir", "en": "Observe and Interact", "es": "Observar e Interactuar" },
+    "description": { "pt-BR": "Um bom design depende de um relacionamento contínuo e recíproco com a paisagem e as pessoas, observando com cuidado antes de agir.", "en": "A good design depends on a continuous and reciprocal relationship with the landscape and people, observing carefully before acting.", "es": "Un buen diseño depende de una relación continua y recíproca con el paisaje y las personas, observando con cuidado antes de actuar." },
+    "guidingQuestion": { "pt-BR": "O que este lugar, essas pessoas ou este sistema já estão me mostrando, antes de eu propor qualquer mudança?", "en": "What is this place, these people, or this system already showing me, before I propose any change?", "es": "¿Qué me está mostrando este lugar, estas personas o este sistema, antes de que yo proponga algún cambio?" },
     "colorToken": "green"
   },
   {
     "id": 2,
-    "name": "Captar e Armazenar Energia",
-    "description": "Desenvolvemos sistemas que coletam recursos quando estão abundantes, para usá-los quando forem necessários.",
-    "guidingQuestion": "Quais fluxos de energia, água, nutrientes ou capital estão passando batido e poderiam ser captados?",
+    "name": { "pt-BR": "Captar e Armazenar Energia", "en": "Catch and Store Energy", "es": "Captar y Almacenar Energía" },
+    "description": { "pt-BR": "Desenvolvemos sistemas que coletam recursos quando estão abundantes, para usá-los quando forem necessários.", "en": "We develop systems that collect resources when they are abundant, to use them when needed.", "es": "Desarrollamos sistemas que recolectan recursos cuando son abundantes, para usarlos cuando sean necesarios." },
+    "guidingQuestion": { "pt-BR": "Quais fluxos de energia, água, nutrientes ou capital estão passando batido e poderiam ser captados?", "en": "What flows of energy, water, nutrients, or capital are being missed and could be captured?", "es": "¿Qué flujos de energía, agua, nutrientes o capital están pasando desapercibidos y podrían ser captados?" },
     "colorToken": "teal"
   },
   {
     "id": 3,
-    "name": "Obter um Rendimento",
-    "description": "Garanta que o projeto está gerando recompensas genuinamente úteis como parte do trabalho realizado.",
-    "guidingQuestion": "Qual é o retorno real e tangível deste projeto para quem está envolvido?",
+    "name": { "pt-BR": "Obter um Rendimento", "en": "Obtain a Yield", "es": "Obtener un Rendimiento" },
+    "description": { "pt-BR": "Garanta que o projeto está gerando recompensas genuinamente úteis como parte do trabalho realizado.", "en": "Ensure the project is generating genuinely useful rewards as part of the work done.", "es": "Asegúrate de que el proyecto está generando recompensas genuinamente útiles como parte del trabajo realizado." },
+    "guidingQuestion": { "pt-BR": "Qual é o retorno real e tangível deste projeto para quem está envolvido?", "en": "What is the real and tangible return of this project for those involved?", "es": "¿Cuál es el retorno real y tangible de este proyecto para quienes están involucrados?" },
     "colorToken": "terra"
   },
   {
     "id": 4,
-    "name": "Aplicar Autorregulação e Aceitar Feedback",
-    "description": "Desencorajamos atividades inadequadas para garantir que os sistemas continuem funcionando bem ao longo do tempo.",
-    "guidingQuestion": "Que mecanismos de avaliação e ajuste este design já prevê?",
+    "name": { "pt-BR": "Aplicar Autorregulação e Aceitar Feedback", "en": "Apply Self-Regulation and Accept Feedback", "es": "Aplicar Autorregulación y Aceptar Retroalimentación" },
+    "description": { "pt-BR": "Desencorajamos atividades inadequadas para garantir que os sistemas continuem funcionando bem ao longo do tempo.", "en": "We discourage inappropriate activities to ensure systems continue to function well over time.", "es": "Desalentamos actividades inadecuadas para garantizar que los sistemas sigan funcionando bien a lo largo del tiempo." },
+    "guidingQuestion": { "pt-BR": "Que mecanismos de avaliação e ajuste este design já prevê?", "en": "What evaluation and adjustment mechanisms does this design already include?", "es": "¿Qué mecanismos de evaluación y ajuste prevé este diseño?" },
     "colorToken": "dragon"
   },
   {
     "id": 5,
-    "name": "Usar e Valorizar Recursos e Serviços Renováveis",
-    "description": "Fazemos o melhor uso possível da abundância da natureza para reduzir o consumo e a dependência de recursos não renováveis.",
-    "guidingQuestion": "O que a natureza já oferece de graça, que hoje estamos pagando para substituir?",
+    "name": { "pt-BR": "Usar e Valorizar Recursos e Serviços Renováveis", "en": "Use and Value Renewable Resources and Services", "es": "Usar y Valorar Recursos y Servicios Renovables" },
+    "description": { "pt-BR": "Fazemos o melhor uso possível da abundância da natureza para reduzir o consumo e a dependência de recursos não renováveis.", "en": "We make the best possible use of nature's abundance to reduce consumption and dependence on non-renewable resources.", "es": "Hacemos el mejor uso posible de la abundancia de la naturaleza para reducir el consumo y la dependencia de recursos no renovables." },
+    "guidingQuestion": { "pt-BR": "O que a natureza já oferece de graça, que hoje estamos pagando para substituir?", "en": "What does nature already offer for free that we are currently paying to replace?", "es": "¿Qué ofrece la naturaleza gratuitamente que hoy estamos pagando para reemplazar?" },
     "colorToken": "navy"
   },
   {
     "id": 6,
-    "name": "Não Produzir Resíduos",
-    "description": "Ao valorizar e fazer bom uso de todos os recursos disponíveis, nada é desperdiçado.",
-    "guidingQuestion": "Para onde vão os \"resíduos\" deste sistema — e quem poderia se alimentar deles?",
+    "name": { "pt-BR": "Não Produzir Resíduos", "en": "Produce No Waste", "es": "No Producir Residuos" },
+    "description": { "pt-BR": "Ao valorizar e fazer bom uso de todos os recursos disponíveis, nada é desperdiçado.", "en": "By valuing and making good use of all available resources, nothing is wasted.", "es": "Al valorar y hacer buen uso de todos los recursos disponibles, nada se desperdicia." },
+    "guidingQuestion": { "pt-BR": "Para onde vão os \"resíduos\" deste sistema — e quem poderia se alimentar deles?", "en": "Where do the 'wastes' of this system go — and who could feed on them?", "es": "¿Hacia dónde van los 'residuos' de este sistema — y quién podría alimentarse de ellos?" },
     "colorToken": "olive"
   },
   {
     "id": 7,
-    "name": "Design a Partir de Padrões para Detalhes",
-    "description": "Ao dar um passo atrás, observamos padrões na natureza e na sociedade, usando-os para desenhar os detalhes.",
-    "guidingQuestion": "Que padrão maior — climático, social, ecológico — este projeto precisa respeitar antes de entrar em detalhes?",
+    "name": { "pt-BR": "Design a Partir de Padrões para Detalhes", "en": "Design from Patterns to Details", "es": "Diseñar desde Patrones hacia Detalles" },
+    "description": { "pt-BR": "Ao dar um passo atrás, observamos padrões na natureza e na sociedade, usando-os para desenhar os detalhes.", "en": "By stepping back, we observe patterns in nature and society, using them to design the details.", "es": "Al dar un paso atrás, observamos patrones en la naturaleza y la sociedad, usándolos para diseñar los detalles." },
+    "guidingQuestion": { "pt-BR": "Que padrão maior — climático, social, ecológico — este projeto precisa respeitar antes de entrar em detalhes?", "en": "What larger pattern — climatic, social, ecological — does this project need to respect before getting into details?", "es": "¿Qué patrón mayor — climático, social, ecológico — necesita respetar este proyecto antes de entrar en detalles?" },
     "colorToken": "gold"
   },
   {
     "id": 8,
-    "name": "Integrar ao Invés de Segregar",
-    "description": "Ao colocar as coisas certas nos lugares certos, relações se desenvolvem e os elementos se apoiam mutuamente.",
-    "guidingQuestion": "Quais elementos deste projeto poderiam trabalhar juntos, em vez de isolados?",
+    "name": { "pt-BR": "Integrar ao Invés de Segregar", "en": "Integrate Rather Than Segregate", "es": "Integrar en Lugar de Segregar" },
+    "description": { "pt-BR": "Ao colocar as coisas certas nos lugares certos, relações se desenvolvem e os elementos se apoiam mutuamente.", "en": "By placing the right things in the right places, relationships develop and elements support each other.", "es": "Al colocar las cosas correctas en los lugares correctos, se desarrollan relaciones y los elementos se apoyan mutuamente." },
+    "guidingQuestion": { "pt-BR": "Quais elementos deste projeto poderiam trabalhar juntos, em vez de isolados?", "en": "Which elements of this project could work together instead of in isolation?", "es": "¿Qué elementos de este proyecto podrían trabajar juntos, en vez de aislados?" },
     "colorToken": "purple"
   },
   {
     "id": 9,
-    "name": "Usar Soluções Pequenas e Lentas",
-    "description": "Sistemas pequenos e lentos são mais fáceis de manter do que os grandes, e usam melhor os recursos locais.",
-    "guidingQuestion": "Isto pode começar menor, mais devagar, e ainda assim ser bem-sucedido?",
+    "name": { "pt-BR": "Usar Soluções Pequenas e Lentas", "en": "Use Small and Slow Solutions", "es": "Usar Soluciones Pequeñas y Lentas" },
+    "description": { "pt-BR": "Sistemas pequenos e lentos são mais fáceis de manter do que os grandes, e usam melhor os recursos locais.", "en": "Small and slow systems are easier to maintain than large ones, and make better use of local resources.", "es": "Los sistemas pequeños y lentos son más fáciles de mantener que los grandes, y usan mejor los recursos locales." },
+    "guidingQuestion": { "pt-BR": "Isto pode começar menor, mais devagar, e ainda assim ser bem-sucedido?", "en": "Can this start smaller, slower, and still be successful?", "es": "¿Puede esto empezar más pequeño, más lento, y aún así ser exitoso?" },
     "colorToken": "slate"
   },
   {
     "id": 10,
-    "name": "Usar e Valorizar a Diversidade",
-    "description": "A diversidade reduz a vulnerabilidade a ameaças e explora a singularidade do ambiente em que o projeto está inserido.",
-    "guidingQuestion": "Que monoculturas — de espécies, de pessoas, de ideias — este design pode evitar?",
+    "name": { "pt-BR": "Usar e Valorizar a Diversidade", "en": "Use and Value Diversity", "es": "Usar y Valorar la Diversidad" },
+    "description": { "pt-BR": "A diversidade reduz a vulnerabilidade a ameaças e explora a singularidade do ambiente em que o projeto está inserido.", "en": "Diversity reduces vulnerability to threats and exploits the uniqueness of the environment where the project is located.", "es": "La diversidad reduce la vulnerabilidad a amenazas y explora la singularidad del ambiente donde el proyecto está inserido." },
+    "guidingQuestion": { "pt-BR": "Que monoculturas — de espécies, de pessoas, de ideias — este design pode evitar?", "en": "What monocultures — of species, people, or ideas — can this design avoid?", "es": "¿Qué monocultivos — de especies, personas o ideas — puede evitar este diseño?" },
     "colorToken": "forest2"
   },
   {
     "id": 11,
-    "name": "Usar Bordas e Valorizar o Marginal",
-    "description": "A interface entre coisas é onde os eventos mais interessantes acontecem — muitas vezes os elementos mais produtivos do sistema.",
-    "guidingQuestion": "Onde estão as bordas deste projeto — e como podemos torná-las mais produtivas?",
+    "name": { "pt-BR": "Usar Bordas e Valorizar o Marginal", "en": "Use Edges and Value the Marginal", "es": "Usar Bordes y Valorar lo Marginal" },
+    "description": { "pt-BR": "A interface entre coisas é onde os eventos mais interessantes acontecem — muitas vezes os elementos mais produtivos do sistema.", "en": "The interface between things is where the most interesting events happen — often the most productive elements of the system.", "es": "La interfaz entre cosas es donde ocurren los eventos más interesantes — a menudo los elementos más productivos del sistema." },
+    "guidingQuestion": { "pt-BR": "Onde estão as bordas deste projeto — e como podemos torná-las mais produtivas?", "en": "Where are the edges of this project — and how can we make them more productive?", "es": "¿Dónde están los bordes de este proyecto — y cómo podemos hacerlos más productivos?" },
     "colorToken": "sky"
   },
   {
     "id": 12,
-    "name": "Usar e Responder à Mudança de Forma Criativa",
-    "description": "Podemos ter um impacto positivo sobre mudanças inevitáveis, observando com cuidado e intervindo no momento certo.",
-    "guidingQuestion": "Como este design permanece flexível diante do que ainda não sabemos?",
+    "name": { "pt-BR": "Usar e Responder à Mudança de Forma Criativa", "en": "Creatively Use and Respond to Change", "es": "Usar y Responder al Cambio de Forma Creativa" },
+    "description": { "pt-BR": "Podemos ter um impacto positivo sobre mudanças inevitáveis, observando com cuidado e intervindo no momento certo.", "en": "We can have a positive impact on inevitable changes by observing carefully and intervening at the right time.", "es": "Podemos tener un impacto positivo sobre cambios inevitables, observando con cuidado e interviniendo en el momento correcto." },
+    "guidingQuestion": { "pt-BR": "Como este design permanece flexível diante do que ainda não sabemos?", "en": "How does this design remain flexible in the face of what we don't yet know?", "es": "¿Cómo permanece flexible este diseño frente a lo que aún no sabemos?" },
     "colorToken": "burgundy"
   }
 ]

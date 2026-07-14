@@ -2,16 +2,51 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "SDGs",
   "type": "array",
+  "minItems": 17,
+  "maxItems": 17,
   "items": {
     "type": "object",
-    "required": ["id", "title", "officialColorHex"],
+    "required": [
+      "id",
+      "title",
+      "officialColorHex"
+    ],
     "properties": {
-      "id": { "type": "integer", "minimum": 1, "maximum": 17 },
-      "title": { "type": "string" },
-      "officialColorHex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+      "id": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 17
+      },
+      "title": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "pt-BR"
+            ],
+            "properties": {
+              "pt-BR": {
+                "type": "string"
+              },
+              "en": {
+                "type": "string"
+              },
+              "es": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "officialColorHex": {
+        "type": "string",
+        "pattern": "^#[0-9A-Fa-f]{6}$"
+      }
     },
     "additionalProperties": false
-  },
-  "minItems": 17,
-  "maxItems": 17
+  }
 }

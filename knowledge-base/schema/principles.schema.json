@@ -2,18 +2,102 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Principles",
   "type": "array",
+  "minItems": 12,
+  "maxItems": 12,
   "items": {
     "type": "object",
-    "required": ["id", "name", "description", "guidingQuestion", "colorToken"],
+    "required": [
+      "id",
+      "name",
+      "description",
+      "guidingQuestion",
+      "colorToken"
+    ],
     "properties": {
-      "id": { "type": "integer", "minimum": 1, "maximum": 12 },
-      "name": { "type": "string" },
-      "description": { "type": "string" },
-      "guidingQuestion": { "type": "string" },
-      "colorToken": { "type": "string" }
+      "id": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 12
+      },
+      "name": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "pt-BR"
+            ],
+            "properties": {
+              "pt-BR": {
+                "type": "string"
+              },
+              "en": {
+                "type": "string"
+              },
+              "es": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "description": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "pt-BR"
+            ],
+            "properties": {
+              "pt-BR": {
+                "type": "string"
+              },
+              "en": {
+                "type": "string"
+              },
+              "es": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "guidingQuestion": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "pt-BR"
+            ],
+            "properties": {
+              "pt-BR": {
+                "type": "string"
+              },
+              "en": {
+                "type": "string"
+              },
+              "es": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "colorToken": {
+        "type": "string"
+      }
     },
     "additionalProperties": false
-  },
-  "minItems": 12,
-  "maxItems": 12
+  }
 }

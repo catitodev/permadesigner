@@ -7,22 +7,31 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
-import { resolve, dirname } from "node:path";
+import { join, dirname as pathDirname } from "node:path";
 
-const ROOT = resolve(import.meta.dirname, "..");
-const KB = resolve(ROOT, "knowledge-base");
-const OUT = resolve(ROOT, "modules/core/grounding/aliases.ts");
+const KB = join(process.cwd(), "knowledge-base");
+const OUT = join(process.cwd(), "modules", "core", "grounding", "aliases.ts");
 
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
 
 function readJSON<T>(filename: string): T {
-  return JSON.parse(readFileSync(resolve(KB, filename), "utf-8")) as T;
+  const fullPath = join(KB, filename);
+  return JSON.parse(readFileSync(fullPath, "utf-8")) as T;
 }
 
 function lower(s: string): string {
   return s.toLowerCase();
+}
+
+/** Resolves a localizable field (string or {locale: string}) to pt-BR text. */
+function resolve(value: unknown): string {
+  if (typeof value === "string") return value;
+  if (value && typeof value === "object" && "pt-BR" in value) {
+    return (value as Record<string, string>)["pt-BR"];
+  }
+  return String(value ?? "");
 }
 
 // ---------------------------------------------------------------------------
@@ -31,23 +40,23 @@ function lower(s: string): string {
 
 interface Framework {
   id: string;
-  name: string;
+  name: unknown;
   sigla: { letter: string; meaning: string }[] | null;
 }
 
 interface Principle {
   id: number;
-  name: string;
+  name: unknown;
 }
 
 interface SDG {
   id: number;
-  title: string;
+  title: unknown;
 }
 
 interface NaturePattern {
   id: string;
-  name: string;
+  name: unknown;
 }
 
 // ---------------------------------------------------------------------------
@@ -58,12 +67,9 @@ function buildFrameworkAliases(frameworks: Framework[]): Record<string, string> 
   const map: Record<string, string> = {};
 
   for (const fw of frameworks) {
-    // Map the id itself
     map[lower(fw.id)] = fw.id;
-    // Map the name
-    map[lower(fw.name)] = fw.id;
+    map[lower(resolve(fw.name))] = fw.id;
 
-    // If sigla exists, build the acronym and dotted variant
     if (fw.sigla && fw.sigla.length > 0) {
       const letters = fw.sigla.map((s) => s.letter).join("");
       const dotted = fw.sigla.map((s) => s.letter).join(".") + ".";
@@ -83,14 +89,11 @@ function buildPrincipleAliases(principles: Principle[]): Record<string, string> 
 
   for (const p of principles) {
     const id = String(p.id);
-    // "princípio N"
+    const name = resolve(p.name);
     map[lower(`princípio ${p.id}`)] = id;
-    // "princípio N - name"
-    map[lower(`princípio ${p.id} - ${p.name}`)] = id;
-    // "pN"
+    map[lower(`princípio ${p.id} - ${name}`)] = id;
     map[lower(`p${p.id}`)] = id;
-    // name itself
-    map[lower(p.name)] = id;
+    map[lower(name)] = id;
   }
 
   return map;
@@ -101,12 +104,10 @@ function buildSDGAliases(sdgs: SDG[]): Record<string, string> {
 
   for (const sdg of sdgs) {
     const id = String(sdg.id);
-    // "ods N"
+    const title = resolve(sdg.title);
     map[lower(`ods ${sdg.id}`)] = id;
-    // "ods N - title"
-    map[lower(`ods ${sdg.id} - ${sdg.title}`)] = id;
-    // title itself
-    map[lower(sdg.title)] = id;
+    map[lower(`ods ${sdg.id} - ${title}`)] = id;
+    map[lower(title)] = id;
   }
 
   return map;
@@ -116,10 +117,8 @@ function buildNaturePatternAliases(patterns: NaturePattern[]): Record<string, st
   const map: Record<string, string> = {};
 
   for (const pat of patterns) {
-    // id itself (kebab-case)
     map[lower(pat.id)] = pat.id;
-    // name
-    map[lower(pat.name)] = pat.id;
+    map[lower(resolve(pat.name))] = pat.id;
   }
 
   return map;
@@ -197,7 +196,7 @@ function main() {
   ].join("\n");
 
   // Ensure output directory exists
-  mkdirSync(dirname(OUT), { recursive: true });
+  mkdirSync(pathDirname(OUT), { recursive: true });
   writeFileSync(OUT, output, "utf-8");
 
   console.log(`✅ Generated ${OUT}`);
