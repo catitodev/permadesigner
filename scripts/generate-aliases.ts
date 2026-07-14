@@ -125,6 +125,34 @@ function buildNaturePatternAliases(patterns: NaturePattern[]): Record<string, st
   return map;
 }
 
+interface DesignSkill {
+  id: string;
+  name: string;
+}
+
+interface OssTool {
+  id: string;
+  name: string;
+}
+
+function buildDesignSkillAliases(skills: DesignSkill[]): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const s of skills) {
+    map[lower(s.id)] = s.id;
+    map[lower(s.name)] = s.id;
+  }
+  return map;
+}
+
+function buildOssToolAliases(tools: OssTool[]): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const t of tools) {
+    map[lower(t.id)] = t.id;
+    map[lower(t.name)] = t.id;
+  }
+  return map;
+}
+
 // ---------------------------------------------------------------------------
 // Generate output
 // ---------------------------------------------------------------------------
@@ -141,11 +169,15 @@ function main() {
   const principles = readJSON<Principle[]>("principles.json");
   const sdgs = readJSON<SDG[]>("sdgs.json");
   const patterns = readJSON<NaturePattern[]>("nature-patterns.json");
+  const skills = readJSON<DesignSkill[]>("design-skills.json");
+  const tools = readJSON<OssTool[]>("oss-tools.json");
 
   const frameworkAliases = buildFrameworkAliases(frameworks);
   const principleAliases = buildPrincipleAliases(principles);
   const sdgAliases = buildSDGAliases(sdgs);
   const naturePatternAliases = buildNaturePatternAliases(patterns);
+  const designSkillAliases = buildDesignSkillAliases(skills);
+  const ossToolAliases = buildOssToolAliases(tools);
 
   const output = [
     "// AUTO-GENERATED — do not edit manually. Run `npm run generate:aliases` to regenerate.",
@@ -158,6 +190,10 @@ function main() {
     "",
     formatRecord("naturePatternAliases", naturePatternAliases),
     "",
+    formatRecord("designSkillAliases", designSkillAliases),
+    "",
+    formatRecord("ossToolAliases", ossToolAliases),
+    "",
   ].join("\n");
 
   // Ensure output directory exists
@@ -169,7 +205,9 @@ function main() {
     `   Frameworks: ${Object.keys(frameworkAliases).length} aliases | ` +
       `Principles: ${Object.keys(principleAliases).length} aliases | ` +
       `SDGs: ${Object.keys(sdgAliases).length} aliases | ` +
-      `Patterns: ${Object.keys(naturePatternAliases).length} aliases`
+      `Patterns: ${Object.keys(naturePatternAliases).length} aliases | ` +
+      `Skills: ${Object.keys(designSkillAliases).length} aliases | ` +
+      `Tools: ${Object.keys(ossToolAliases).length} aliases`
   );
 }
 

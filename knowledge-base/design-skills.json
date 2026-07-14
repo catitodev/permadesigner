@@ -1,0 +1,74 @@
+[
+  {
+    "id": "hydrology",
+    "name": "Hidrologia",
+    "description": "Estudo dos fluxos de água superficiais e subterrâneos, ciclo hidrológico e manejo de bacias.",
+    "relevantDecisions": ["captação de água", "drenagem", "irrigação", "açudes", "swales"]
+  },
+  {
+    "id": "agronomy",
+    "name": "Agronomia",
+    "description": "Ciência da produção agrícola: solo, adubação, manejo de pragas, rotação de culturas.",
+    "relevantDecisions": ["escolha de espécies", "fertilidade do solo", "manejo integrado de pragas", "consórcios"]
+  },
+  {
+    "id": "agroforestry",
+    "name": "Sistemas Agroflorestais",
+    "description": "Design e manejo de sistemas que integram árvores com cultivos agrícolas e/ou animais.",
+    "relevantDecisions": ["estratificação vegetal", "sucessão ecológica", "poda de manejo", "espécies companheiras"]
+  },
+  {
+    "id": "soil-science",
+    "name": "Ciência do Solo",
+    "description": "Análise de textura, estrutura, biologia e química do solo para decisões de manejo.",
+    "relevantDecisions": ["análise de solo", "correção de pH", "compostagem", "cobertura morta"]
+  },
+  {
+    "id": "architecture",
+    "name": "Arquitetura e Bioconstrução",
+    "description": "Projeto de edificações com materiais naturais, conforto térmico e eficiência energética.",
+    "relevantDecisions": ["orientação solar de construções", "materiais naturais", "telhado verde", "ventilação cruzada"]
+  },
+  {
+    "id": "ecology",
+    "name": "Ecologia",
+    "description": "Relações entre organismos e seus ambientes: biodiversidade, ecossistemas, resiliência.",
+    "relevantDecisions": ["corredores ecológicos", "biodiversidade funcional", "restauração de áreas degradadas"]
+  },
+  {
+    "id": "cartography-gis",
+    "name": "Cartografia e Geoprocessamento",
+    "description": "Mapeamento, análise espacial, curvas de nível, uso de SIG para planejamento territorial.",
+    "relevantDecisions": ["mapeamento de terreno", "curvas de nível", "zoneamento", "análise de declividade"]
+  },
+  {
+    "id": "social-facilitation",
+    "name": "Facilitação Social e Participativa",
+    "description": "Técnicas de escuta, mediação de conflitos e tomada de decisão coletiva.",
+    "relevantDecisions": ["projetos comunitários", "governança participativa", "resolução de conflitos de vizinhança"]
+  },
+  {
+    "id": "animal-husbandry",
+    "name": "Manejo Animal Integrado",
+    "description": "Criação de animais integrada ao sistema produtivo: pastoreio rotacionado, aves, aquicultura.",
+    "relevantDecisions": ["pastoreio rotacionado", "galinheiro móvel", "integração lavoura-pecuária", "aquaponia"]
+  },
+  {
+    "id": "energy-systems",
+    "name": "Sistemas de Energia Renovável",
+    "description": "Dimensionamento e instalação de energia solar, eólica, micro-hidro e biogás.",
+    "relevantDecisions": ["energia solar", "energia eólica", "biodigestor", "eficiência energética"]
+  },
+  {
+    "id": "water-treatment",
+    "name": "Tratamento de Água e Efluentes",
+    "description": "Sistemas naturais de tratamento: wetlands, fossa biodigestora, reúso de água cinza.",
+    "relevantDecisions": ["tratamento de esgoto", "bacia de evapotranspiração", "reúso de água cinza", "wetlands"]
+  },
+  {
+    "id": "botany",
+    "name": "Botânica e Etnobotânica",
+    "description": "Identificação de espécies, usos tradicionais de plantas, PANC e plantas medicinais.",
+    "relevantDecisions": ["identificação de espécies nativas", "PANC", "plantas medicinais", "plantas indicadoras"]
+  }
+]

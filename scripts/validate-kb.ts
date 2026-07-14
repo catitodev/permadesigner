@@ -41,6 +41,16 @@ const targets: ValidationTarget[] = [
     dataFile: "nature-patterns.json",
     schemaFile: "nature-patterns.schema.json",
   },
+  {
+    name: "design-skills",
+    dataFile: "design-skills.json",
+    schemaFile: "design-skills.schema.json",
+  },
+  {
+    name: "oss-tools",
+    dataFile: "oss-tools.json",
+    schemaFile: "oss-tools.schema.json",
+  },
 ];
 
 function main(): void {

@@ -110,6 +110,9 @@ export async function GET(request: Request, { params }: RouteParams) {
     fileExtension = "docx";
   }
 
+  // Build filename
+  const filename = `${project.name.replace(/[^a-zA-Z0-9\u00C0-\u024F -]/g, "")}_v${nextVersion}.${fileExtension}`;
+
   // Save version record in scope_documents
   await supabase.from("scope_documents").insert({
     project_id: projectId,
@@ -118,9 +121,33 @@ export async function GET(request: Request, { params }: RouteParams) {
     content: scopeDoc,
   });
 
-  // Return the file as a download
-  const filename = `${project.name.replace(/[^a-zA-Z0-9\u00C0-\u024F -]/g, "")}_v${nextVersion}.${fileExtension}`;
+  // Upload to Google Drive if integration is connected
+  const { data: driveIntegration } = await supabase
+    .from("user_integrations")
+    .select("encrypted_tokens")
+    .eq("user_id", user.id)
+    .eq("provider", "google-drive")
+    .single();
 
+  if (driveIntegration) {
+    try {
+      const { decryptTokens, GoogleDriveAdapter } = await import(
+        "@/modules/integrations/google-drive"
+      );
+      type TokensType = import("@/modules/integrations/google-drive").GoogleDriveTokens;
+      const tokens = decryptTokens<TokensType>(driveIntegration.encrypted_tokens);
+      const drive = new GoogleDriveAdapter(tokens);
+      await drive.uploadFile({
+        fileName: filename,
+        mimeType: contentType,
+        buffer,
+      });
+    } catch {
+      // Non-blocking: if Drive upload fails, the export still succeeds
+    }
+  }
+
+  // Return the file as a download
   return new NextResponse(new Uint8Array(buffer), {
     status: 200,
     headers: {

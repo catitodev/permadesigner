@@ -1,0 +1,98 @@
+[
+  {
+    "id": "qgis",
+    "name": "QGIS",
+    "category": "geoprocessamento",
+    "description": "Sistema de informação geográfica open-source para mapeamento, análise de terreno e curvas de nível.",
+    "url": "https://qgis.org",
+    "relevantFor": ["mapeamento", "curvas de nível", "análise de declividade", "zoneamento"]
+  },
+  {
+    "id": "google-earth",
+    "name": "Google Earth Pro",
+    "category": "sensoriamento remoto",
+    "description": "Visualização de imagens de satélite de alta resolução para reconhecimento de terreno.",
+    "url": "https://earth.google.com",
+    "relevantFor": ["reconhecimento aéreo", "histórico de uso do solo", "medições de área"]
+  },
+  {
+    "id": "openstreetmap",
+    "name": "OpenStreetMap",
+    "category": "mapeamento colaborativo",
+    "description": "Mapa aberto e colaborativo com dados de estradas, rios, edificações e uso do solo.",
+    "url": "https://www.openstreetmap.org",
+    "relevantFor": ["infraestrutura local", "hidrografia", "acessos"]
+  },
+  {
+    "id": "libreoffice-calc",
+    "name": "LibreOffice Calc",
+    "category": "planilhas",
+    "description": "Planilha open-source para orçamentos, cronogramas e listas de espécies.",
+    "url": "https://www.libreoffice.org",
+    "relevantFor": ["orçamento", "cronograma", "inventário de espécies"]
+  },
+  {
+    "id": "inkscape",
+    "name": "Inkscape",
+    "category": "design vetorial",
+    "description": "Editor de gráficos vetoriais para criar plantas e mapas conceituais de design.",
+    "url": "https://inkscape.org",
+    "relevantFor": ["plantas de design", "mapas conceituais", "zoneamento visual"]
+  },
+  {
+    "id": "stellarium",
+    "name": "Stellarium",
+    "category": "astronomia",
+    "description": "Planetário open-source que mostra a posição do sol ao longo do ano para qualquer localização.",
+    "url": "https://stellarium.org",
+    "relevantFor": ["análise solar", "orientação de construções", "sombreamento sazonal"]
+  },
+  {
+    "id": "f4map",
+    "name": "F4map",
+    "category": "visualização 3D",
+    "description": "Visualizador 3D de cidades e terrenos baseado em dados OpenStreetMap.",
+    "url": "https://demo.f4map.com",
+    "relevantFor": ["visualização de terreno em 3D", "topografia urbana"]
+  },
+  {
+    "id": "climate-data-org",
+    "name": "Climate-Data.org",
+    "category": "dados climáticos",
+    "description": "Base de dados climáticos globais com temperatura, precipitação e diagramas por localidade.",
+    "url": "https://climate-data.org",
+    "relevantFor": ["análise climática", "regime de chuvas", "planejamento de irrigação"]
+  },
+  {
+    "id": "open-food-network",
+    "name": "Open Food Network",
+    "category": "comercialização",
+    "description": "Plataforma open-source para comercialização direta de alimentos locais.",
+    "url": "https://openfoodnetwork.org",
+    "relevantFor": ["comercialização", "CSA", "venda direta", "economia local"]
+  },
+  {
+    "id": "inaturalist",
+    "name": "iNaturalist",
+    "category": "biodiversidade",
+    "description": "App colaborativo de identificação de espécies com IA e base de dados científica.",
+    "url": "https://www.inaturalist.org",
+    "relevantFor": ["identificação de espécies", "inventário de biodiversidade", "fauna local"]
+  },
+  {
+    "id": "soilgrids",
+    "name": "SoilGrids",
+    "category": "solos",
+    "description": "Mapeamento global de propriedades do solo em resolução de 250m (ISRIC).",
+    "url": "https://soilgrids.org",
+    "relevantFor": ["análise de solo remota", "textura do solo", "carbono orgânico"]
+  },
+  {
+    "id": "farmhack",
+    "name": "Farm Hack",
+    "category": "ferramentas agrícolas",
+    "description": "Comunidade open-source de ferramentas e equipamentos agrícolas DIY.",
+    "url": "https://farmhack.org",
+    "relevantFor": ["ferramentas DIY", "implementos de baixo custo", "soluções locais"]
+  }
+]
