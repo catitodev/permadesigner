@@ -3,11 +3,13 @@ import {
   principleAliases,
   sdgAliases,
   naturePatternAliases,
+  designSkillAliases,
+  ossToolAliases,
 } from "./aliases";
 
 // --- Types ---
 
-export type ClaimType = "framework" | "principle" | "sdg" | "nature-pattern";
+export type ClaimType = "framework" | "principle" | "sdg" | "nature-pattern" | "design-skill" | "oss-tool";
 
 export interface Claim {
   type: ClaimType;
@@ -54,15 +56,29 @@ interface KnowledgeNaturePattern {
   [key: string]: unknown;
 }
 
+interface KnowledgeDesignSkill {
+  id: string;
+  name: string;
+  [key: string]: unknown;
+}
+
+interface KnowledgeOssTool {
+  id: string;
+  name: string;
+  [key: string]: unknown;
+}
+
 export interface KnowledgeContext {
   frameworks?: KnowledgeFramework[];
   principles?: KnowledgePrinciple[];
   sdgs?: KnowledgeSdg[];
   naturePatterns?: KnowledgeNaturePattern[];
+  designSkills?: KnowledgeDesignSkill[];
+  ossTools?: KnowledgeOssTool[];
 }
 
 // --- Inline ref tag regex: [[ref:type:id]] ---
-const INLINE_REF_REGEX = /\[\[ref:(framework|principle|sdg|nature-pattern):([^\]]+)\]\]/g;
+const INLINE_REF_REGEX = /\[\[ref:(framework|principle|sdg|nature-pattern|design-skill|oss-tool):([^\]]+)\]\]/g;
 
 // --- Helper: build alias lookup sorted by longest-first for greedy matching ---
 
@@ -87,6 +103,8 @@ export class GroundingValidator {
       ...buildSortedAliases(sdgAliases, "sdg"),
       ...buildSortedAliases(frameworkAliases, "framework"),
       ...buildSortedAliases(naturePatternAliases, "nature-pattern"),
+      ...buildSortedAliases(designSkillAliases, "design-skill"),
+      ...buildSortedAliases(ossToolAliases, "oss-tool"),
     ];
   }
 
@@ -178,6 +196,10 @@ export class GroundingValidator {
         return this.verifyFramework(claim);
       case "nature-pattern":
         return this.verifyNaturePattern(claim);
+      case "design-skill":
+        return this.verifyDesignSkill(claim);
+      case "oss-tool":
+        return this.verifyOssTool(claim);
       default:
         return { claim, valid: false, issue: `Unknown claim type: ${claim.type}` };
     }
@@ -287,6 +309,42 @@ export class GroundingValidator {
         claim,
         valid: false,
         issue: `Nature pattern "${claim.id}" not found in knowledge base`,
+      };
+    }
+
+    return { claim, valid: true };
+  }
+
+  private verifyDesignSkill(claim: Claim): VerificationResult {
+    const skills = this.knowledgeContext.designSkills;
+    if (!skills || skills.length === 0) {
+      return { claim, valid: false, issue: "No design skills loaded in knowledge context" };
+    }
+
+    const skill = skills.find((s) => s.id === claim.id);
+    if (!skill) {
+      return {
+        claim,
+        valid: false,
+        issue: `Design skill "${claim.id}" not found in knowledge base`,
+      };
+    }
+
+    return { claim, valid: true };
+  }
+
+  private verifyOssTool(claim: Claim): VerificationResult {
+    const tools = this.knowledgeContext.ossTools;
+    if (!tools || tools.length === 0) {
+      return { claim, valid: false, issue: "No OSS tools loaded in knowledge context" };
+    }
+
+    const tool = tools.find((t) => t.id === claim.id);
+    if (!tool) {
+      return {
+        claim,
+        valid: false,
+        issue: `OSS tool "${claim.id}" not found in knowledge base`,
       };
     }
 

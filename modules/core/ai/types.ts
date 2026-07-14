@@ -19,6 +19,8 @@ export interface AiGenerateInput {
   responseSchema?: object;
   /** Sampling temperature. Default: 0.3 */
   temperature?: number;
+  /** Navigation mode: changes assistant behavior (student=tutor, designer=team). */
+  mode?: "student" | "designer";
 }
 
 export interface AiGenerateOutput {

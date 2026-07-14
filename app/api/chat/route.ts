@@ -208,6 +208,12 @@ export async function POST(request: Request) {
     const ai = getAiProvider();
     const systemPrompt = getSystemPrompt();
 
+    // Inject mode-specific prompt block
+    const { MODE_PROMPTS } = await import("@/modules/core/ai/mode-prompts");
+    const mode = (project.navigation_mode as "student" | "designer") ?? "student";
+    const modeBlock = MODE_PROMPTS[mode] ?? "";
+    const fullSystemPrompt = `${systemPrompt}\n\n${modeBlock}`;
+
     // Build the messages array: system + stage prompt + recent history + user message
     const recentHistory = (history || []).slice(-10).map((m) => ({
       role: m.role as AiMessage["role"],
@@ -215,7 +221,7 @@ export async function POST(request: Request) {
     }));
 
     const messages: AiMessage[] = [
-      { role: "system", content: systemPrompt },
+      { role: "system", content: fullSystemPrompt },
       ...stagePrompt,
       ...recentHistory,
       { role: "user", content: message },
