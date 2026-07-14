@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import withPWAInit from "@ducanh2912/next-pwa";
+import createNextIntlPlugin from "next-intl/plugin";
 
 const securityHeaders = [
   {
@@ -66,4 +67,6 @@ const withPWA = withPWAInit({
   register: true,
 });
 
-export default withPWA(nextConfig);
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+
+export default withNextIntl(withPWA(nextConfig));

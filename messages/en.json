@@ -1,0 +1,107 @@
+{
+  "common": {
+    "send": "Send",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "back": "Back",
+    "close": "Close",
+    "confirm": "Confirm"
+  },
+  "auth": {
+    "loginWithGoogle": "Sign in with Google",
+    "loginSubtitle": "Plan your permaculture project step by step, guided by the 12 principles and nature patterns.",
+    "loginFooter": "Sign in using your existing Google account. No new password needed.",
+    "privacy": "Privacy Policy"
+  },
+  "dashboard": {
+    "title": "My Projects",
+    "subtitle": "Manage your permaculture design projects",
+    "newProject": "New Project",
+    "empty": "No projects yet",
+    "emptyDesc": "Start by creating your first permaculture project. The assistant will guide you step by step through the design process.",
+    "updatedAt": "Updated on",
+    "currentStage": "Current stage",
+    "complete": "complete"
+  },
+  "chat": {
+    "placeholder": "Type your message...",
+    "placeholderListening": "Listening...",
+    "sendButton": "Send",
+    "voiceLabel": "Speak a message",
+    "voiceListening": "Stop listening",
+    "welcome": "Hi! Let's start planning your project.",
+    "welcomeSub": "Type a message to begin the conversation.",
+    "errorMessage": "Sorry, an error occurred while processing your message. Please try again.",
+    "offlineQueued": "📡 You're offline. Your message was saved and will be sent automatically when you're back online."
+  },
+  "project": {
+    "createTitle": "Create new project",
+    "createDesc": "Give your permaculture project a name. You can change it later.",
+    "nameLabel": "Project name",
+    "namePlaceholder": "E.g.: Dream Homestead",
+    "nameRequired": "Name is required",
+    "nameMin": "At least 3 characters",
+    "creating": "Creating...",
+    "create": "Create project"
+  },
+  "scope": {
+    "title": "Scope Document",
+    "downloadPdf": "Download PDF",
+    "downloadDocx": "Download DOCX",
+    "sendEmail": "Send by email",
+    "sending": "Sending...",
+    "complete": "Complete Planning",
+    "initial": "Initial Planning",
+    "missingSections": "Pending sections",
+    "missingDesc": "Complete the following stages for a complete planning document"
+  },
+  "settings": {
+    "title": "Settings",
+    "basics": "Basics",
+    "theme": "Theme",
+    "themeSystem": "System",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "language": "Language",
+    "privacy": "Privacy & LGPD",
+    "exportData": "Export all my data",
+    "deleteAccount": "Delete account",
+    "deleteWarning": "This action is irreversible. All your data will be erased.",
+    "deleteButton": "Delete my account",
+    "deleteConfirm": "Type DELETE to confirm",
+    "deleting": "Deleting...",
+    "confirmDeletion": "Confirm deletion"
+  },
+  "profile": {
+    "title": "Profile",
+    "theme": "Theme",
+    "projects": "Projects created",
+    "createdAt": "Account created on"
+  },
+  "modes": {
+    "student": "Student",
+    "designer": "Designer"
+  },
+  "stages": {
+    "goals": "Goals",
+    "siteSurvey": "Site Survey",
+    "naturePatterns": "Nature Patterns",
+    "boundariesResources": "Boundaries & Resources",
+    "designDecisions": "Design Decisions",
+    "sdgAlignment": "SDG Alignment"
+  },
+  "offline": {
+    "noConnection": "No connection — your messages will be sent when you're back online",
+    "syncing": "Syncing pending messages...",
+    "pending": "pending message(s)"
+  },
+  "footer": {
+    "copyright": "© 2026 PermaBrasilis • PermaDesigner",
+    "privacy": "Privacy",
+    "github": "GitHub"
+  }
+}

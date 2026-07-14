@@ -1,0 +1,107 @@
+{
+  "common": {
+    "send": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "delete": "Excluir",
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "back": "Voltar",
+    "close": "Fechar",
+    "confirm": "Confirmar"
+  },
+  "auth": {
+    "loginWithGoogle": "Entrar com Google",
+    "loginSubtitle": "Planeje seu projeto de permacultura de forma guiada, com apoio dos 12 princípios e padrões da natureza.",
+    "loginFooter": "Ao entrar, você usa sua conta Google existente. Nenhuma senha nova é criada.",
+    "privacy": "Política de Privacidade"
+  },
+  "dashboard": {
+    "title": "Meus Projetos",
+    "subtitle": "Gerencie seus projetos de design em permacultura",
+    "newProject": "Novo Projeto",
+    "empty": "Nenhum projeto ainda",
+    "emptyDesc": "Comece criando seu primeiro projeto de permacultura. O assistente vai te guiar passo a passo pelo processo de design.",
+    "updatedAt": "Atualizado em",
+    "currentStage": "Etapa atual",
+    "complete": "completo"
+  },
+  "chat": {
+    "placeholder": "Digite sua mensagem...",
+    "placeholderListening": "Ouvindo...",
+    "sendButton": "Enviar",
+    "voiceLabel": "Falar uma mensagem",
+    "voiceListening": "Parar de ouvir",
+    "welcome": "Olá! Vamos começar o planejamento do seu projeto.",
+    "welcomeSub": "Digite uma mensagem para iniciar a conversa.",
+    "errorMessage": "Desculpe, ocorreu um erro ao processar sua mensagem. Por favor, tente novamente.",
+    "offlineQueued": "📡 Você está offline. Sua mensagem foi salva e será enviada automaticamente quando a conexão voltar."
+  },
+  "project": {
+    "createTitle": "Criar novo projeto",
+    "createDesc": "Dê um nome ao seu projeto de permacultura. Você poderá alterar depois.",
+    "nameLabel": "Nome do projeto",
+    "namePlaceholder": "Ex.: Sítio dos Sonhos",
+    "nameRequired": "Nome é obrigatório",
+    "nameMin": "Mínimo 3 caracteres",
+    "creating": "Criando...",
+    "create": "Criar projeto"
+  },
+  "scope": {
+    "title": "Documento de Escopo",
+    "downloadPdf": "Baixar PDF",
+    "downloadDocx": "Baixar DOCX",
+    "sendEmail": "Enviar por email",
+    "sending": "Enviando...",
+    "complete": "Planejamento Completo",
+    "initial": "Planejamento Inicial",
+    "missingSections": "Seções pendentes",
+    "missingDesc": "Complete as seguintes etapas para gerar um planejamento completo"
+  },
+  "settings": {
+    "title": "Configurações",
+    "basics": "Básicas",
+    "theme": "Tema",
+    "themeSystem": "Sistema",
+    "themeLight": "Claro",
+    "themeDark": "Escuro",
+    "language": "Idioma",
+    "privacy": "Privacidade e LGPD",
+    "exportData": "Exportar todos os meus dados",
+    "deleteAccount": "Exclusão de conta",
+    "deleteWarning": "Esta ação é irreversível. Todos os seus dados serão apagados.",
+    "deleteButton": "Excluir minha conta",
+    "deleteConfirm": "Digite EXCLUIR para confirmar",
+    "deleting": "Excluindo...",
+    "confirmDeletion": "Confirmar exclusão"
+  },
+  "profile": {
+    "title": "Perfil",
+    "theme": "Tema",
+    "projects": "Projetos criados",
+    "createdAt": "Conta criada em"
+  },
+  "modes": {
+    "student": "Estudante",
+    "designer": "Designer"
+  },
+  "stages": {
+    "goals": "Objetivos",
+    "siteSurvey": "Levantamento",
+    "naturePatterns": "Padrões da Natureza",
+    "boundariesResources": "Fronteiras e Recursos",
+    "designDecisions": "Decisões de Design",
+    "sdgAlignment": "Alinhamento ODS"
+  },
+  "offline": {
+    "noConnection": "Sem conexão — suas mensagens serão enviadas quando voltar online",
+    "syncing": "Sincronizando mensagens pendentes...",
+    "pending": "mensagem(ns) pendente(s) de sincronização"
+  },
+  "footer": {
+    "copyright": "© 2026 PermaBrasilis • PermaDesigner",
+    "privacy": "Privacidade",
+    "github": "GitHub"
+  }
+}
