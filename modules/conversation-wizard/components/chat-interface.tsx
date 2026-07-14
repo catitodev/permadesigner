@@ -24,6 +24,7 @@ import { FallbackForm } from "./fallback-form";
 import type { GroundingRef } from "./grounding-badge";
 import type { FallbackQuestion } from "../fallback-form";
 import { enqueueOfflineMessage } from "@/lib/offline/queue";
+import { useVoice, type VoiceState } from "@/modules/core/voice";
 
 /** Shape of the /api/chat response. */
 interface ChatApiResponse {
@@ -58,6 +59,8 @@ export function ChatInterface({
   const [fallbackMode, setFallbackMode] = useState(false);
   const [fallbackQuestions, setFallbackQuestions] = useState<FallbackQuestion[]>([]);
   const [isFallbackSubmitting, setIsFallbackSubmitting] = useState(false);
+
+  const { available: voiceAvailable, state: voiceState, error: voiceError, startListening, stopListening, stopSpeaking } = useVoice();
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -294,26 +297,59 @@ export function ChatInterface({
       {/* Input area */}
       <div className="shrink-0 border-t border-border bg-background px-3 py-3 sm:px-4">
         <div className="flex items-center gap-2">
-          {/* Voice button placeholder (Req 10.1 — disabled in v1) */}
-          <Button
-            type="button"
-            variant="ghost"
-            size="icon"
-            disabled
-            className="shrink-0 opacity-50"
-            aria-label="Entrada por voz (em breve)"
-            title="Entrada por voz — disponível em breve"
-          >
-            <MicIcon />
-          </Button>
+          {/* Voice button — only shown when browser supports it */}
+          {voiceAvailable && (
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon"
+              className={`shrink-0 ${
+                voiceState === "listening"
+                  ? "text-red-500 animate-pulse"
+                  : voiceState === "processing"
+                    ? "text-amber-500"
+                    : ""
+              }`}
+              disabled={isLoading}
+              onClick={async () => {
+                if (voiceState === "listening") {
+                  stopListening();
+                  return;
+                }
+                stopSpeaking(); // Stop TTS if running
+                try {
+                  const transcript = await startListening();
+                  if (transcript) {
+                    sendMessage(transcript);
+                  }
+                } catch {
+                  // Error is already set in voiceError state
+                }
+              }}
+              aria-label={
+                voiceState === "listening"
+                  ? "Parar de ouvir"
+                  : "Falar uma mensagem"
+              }
+              title={
+                voiceState === "listening"
+                  ? "Ouvindo... clique para parar"
+                  : voiceState === "processing"
+                    ? "Processando..."
+                    : "Falar uma mensagem"
+              }
+            >
+              <MicIcon />
+            </Button>
+          )}
 
           <Input
             ref={inputRef}
             value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
+            onChange={(e) => { setInputValue(e.target.value); stopSpeaking(); }}
             onKeyDown={handleKeyDown}
-            placeholder="Digite sua mensagem..."
-            disabled={isLoading}
+            placeholder={voiceState === "listening" ? "Ouvindo..." : "Digite sua mensagem..."}
+            disabled={isLoading || voiceState === "listening"}
             className="flex-1"
             aria-label="Campo de mensagem"
           />
@@ -328,6 +364,9 @@ export function ChatInterface({
             Enviar
           </Button>
         </div>
+        {voiceError && (
+          <p className="mt-1 text-xs text-destructive">{voiceError}</p>
+        )}
       </div>
     </div>
   );

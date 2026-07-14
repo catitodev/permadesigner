@@ -1,45 +1,44 @@
 /**
- * Web Speech API adapter — implements VoiceProvider using native browser APIs.
+ * Web Speech API adapter — full implementation of VoiceProvider.
  *
- * Gated behind NEXT_PUBLIC_VOICE_ENABLED flag. When the flag is false,
- * `available` returns false and all methods are no-ops.
- *
- * Browser support: Chrome/Edge (full), Firefox (partial), Safari (partial).
- * Degrades gracefully — never crashes on unsupported browsers.
+ * Uses SpeechRecognition for listen() and SpeechSynthesis for speak().
+ * Gated behind NEXT_PUBLIC_VOICE_ENABLED — but the real gate is browser support:
+ * if the browser doesn't support the APIs, `available` is false and the UI hides the mic.
  *
  * Requirements: 10.2, 10.3
  */
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import type { VoiceProvider } from "./types";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
+const LISTEN_TIMEOUT_MS = 10_000; // 10s without speech → reject
 
 export class WebSpeechProvider implements VoiceProvider {
   private recognition: any = null;
   private synthesis: SpeechSynthesis | null = null;
   private _available: boolean;
+  private _listening = false;
 
   constructor() {
-    const enabled = process.env.NEXT_PUBLIC_VOICE_ENABLED === "true";
-    const hasSpeechRecognition =
-      typeof window !== "undefined" &&
-      ("SpeechRecognition" in window || "webkitSpeechRecognition" in window);
-    const hasSpeechSynthesis =
-      typeof window !== "undefined" && "speechSynthesis" in window;
+    if (typeof window === "undefined") {
+      this._available = false;
+      return;
+    }
 
-    this._available = enabled && hasSpeechRecognition && hasSpeechSynthesis;
+    const enabled = process.env.NEXT_PUBLIC_VOICE_ENABLED === "true";
+    const SpeechRecognitionClass =
+      (window as any).SpeechRecognition ?? (window as any).webkitSpeechRecognition;
+    const hasSynthesis = "speechSynthesis" in window;
+
+    this._available = enabled && !!SpeechRecognitionClass && hasSynthesis;
 
     if (this._available) {
-      const SpeechRecognitionClass =
-        (window as any).SpeechRecognition ?? (window as any).webkitSpeechRecognition;
-
-      if (SpeechRecognitionClass) {
-        this.recognition = new SpeechRecognitionClass();
-        this.recognition.lang = "pt-BR";
-        this.recognition.continuous = false;
-        this.recognition.interimResults = false;
-      }
-
+      this.recognition = new SpeechRecognitionClass();
+      this.recognition.lang = "pt-BR";
+      this.recognition.continuous = false;
+      this.recognition.interimResults = false;
+      this.recognition.maxAlternatives = 1;
       this.synthesis = window.speechSynthesis;
     }
   }
@@ -48,48 +47,115 @@ export class WebSpeechProvider implements VoiceProvider {
     return this._available;
   }
 
+  get listening(): boolean {
+    return this._listening;
+  }
+
+  /**
+   * Start listening via microphone. Resolves with transcribed text.
+   * Rejects on: permission denied, timeout, or unsupported browser.
+   */
   listen(): Promise<string> {
-    if (!this.recognition) {
+    if (!this.recognition || !this._available) {
       return Promise.reject(new Error("Speech recognition not available"));
     }
 
-    return new Promise((resolve, reject) => {
-      const rec = this.recognition;
+    if (this._listening) {
+      return Promise.reject(new Error("Already listening"));
+    }
 
-      rec.onresult = (event: any) => {
-        const transcript = event.results[0]?.[0]?.transcript ?? "";
-        resolve(transcript);
+    return new Promise<string>((resolve, reject) => {
+      this._listening = true;
+      let settled = false;
+
+      // Timeout: if no speech detected in 10s
+      const timeout = setTimeout(() => {
+        if (!settled) {
+          settled = true;
+          this._listening = false;
+          this.recognition.abort();
+          reject(new Error("Nenhuma fala detectada. Tente novamente."));
+        }
+      }, LISTEN_TIMEOUT_MS);
+
+      this.recognition.onresult = (event: any) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timeout);
+        this._listening = false;
+        const transcript: string = event.results[0]?.[0]?.transcript ?? "";
+        resolve(transcript.trim());
       };
 
-      rec.onerror = (event: any) => {
-        reject(new Error(`Speech recognition error: ${event.error}`));
+      this.recognition.onerror = (event: any) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timeout);
+        this._listening = false;
+
+        const errorMap: Record<string, string> = {
+          "not-allowed": "Permissão de microfone negada. Habilite nas configurações do navegador.",
+          "no-speech": "Nenhuma fala detectada. Tente novamente.",
+          "audio-capture": "Nenhum microfone encontrado.",
+          "network": "Erro de rede na transcrição.",
+        };
+
+        const message = errorMap[event.error] ?? `Erro de voz: ${event.error}`;
+        reject(new Error(message));
       };
 
-      rec.onend = () => {
-        // If no result was captured, resolve with empty string
+      this.recognition.onend = () => {
+        // If ended without result or error (e.g., silence)
+        if (!settled) {
+          settled = true;
+          clearTimeout(timeout);
+          this._listening = false;
+          reject(new Error("Nenhuma fala detectada. Tente novamente."));
+        }
       };
 
-      rec.start();
+      try {
+        this.recognition.start();
+      } catch (err: any) {
+        settled = true;
+        clearTimeout(timeout);
+        this._listening = false;
+        reject(new Error(err?.message ?? "Falha ao iniciar reconhecimento de voz"));
+      }
     });
   }
 
+  /**
+   * Speak the given text aloud. Resolves when speech ends.
+   * Can be interrupted via stop().
+   */
   speak(text: string): Promise<void> {
-    if (!this.synthesis) {
+    if (!this.synthesis || !this._available) {
       return Promise.resolve();
     }
 
-    return new Promise((resolve) => {
+    // Cancel any ongoing speech first
+    this.synthesis.cancel();
+
+    return new Promise<void>((resolve) => {
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = "pt-BR";
       utterance.rate = 0.95;
+      utterance.pitch = 1;
       utterance.onend = () => resolve();
-      utterance.onerror = () => resolve(); // Don't reject on TTS errors
+      utterance.onerror = () => resolve(); // Don't reject — graceful degradation
       this.synthesis!.speak(utterance);
     });
   }
 
+  /**
+   * Stop any ongoing listening or speaking immediately.
+   */
   stop(): void {
-    this.recognition?.abort();
+    if (this._listening) {
+      this._listening = false;
+      this.recognition?.abort();
+    }
     this.synthesis?.cancel();
   }
 }
