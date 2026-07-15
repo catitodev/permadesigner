@@ -212,7 +212,19 @@ export async function POST(request: Request) {
     const { MODE_PROMPTS } = await import("@/modules/core/ai/mode-prompts");
     const mode = (project.navigation_mode as "student" | "designer") ?? "student";
     const modeBlock = MODE_PROMPTS[mode] ?? "";
-    const fullSystemPrompt = `${systemPrompt}\n\n${modeBlock}`;
+
+    // Inject locale instruction
+    const { data: userProfile } = await supabase
+      .from("users")
+      .select("locale")
+      .eq("id", user.id)
+      .single();
+    const userLocale = userProfile?.locale ?? "pt-BR";
+    const localeInstruction = userLocale !== "pt-BR"
+      ? `\n\nIDIOMA DA CONVERSA: ${userLocale}\nResponda SEMPRE no idioma acima. O CONTEXTO_BASE_CONHECIMENTO abaixo já está no idioma correto.`
+      : "";
+
+    const fullSystemPrompt = `${systemPrompt}\n\n${modeBlock}${localeInstruction}`;
 
     // Build the messages array: system + stage prompt + recent history + user message
     const recentHistory = (history || []).slice(-10).map((m) => ({

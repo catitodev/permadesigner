@@ -1,102 +1,102 @@
 [
   {
     "id": "sun-shade",
-    "name": "Sol e Sombra",
-    "description": "Como a luz solar se move sobre o local ao longo do dia e das estações — a base de quase toda decisão de zoneamento e escolha de espécies.",
+    "name": { "pt-BR": "Sol e Sombra", "en": "Sun and Shade", "es": "Sol y Sombra" },
+    "description": { "pt-BR": "Como a luz solar se move sobre o local ao longo do dia e das estações — a base de quase toda decisão de zoneamento e escolha de espécies.", "en": "How sunlight moves across the site throughout the day and seasons — the basis for almost every zoning and species decision.", "es": "Cómo la luz solar se mueve por el sitio a lo largo del día y las estaciones — la base de casi toda decisión de zonificación y elección de especies." },
     "guidingQuestions": [
-      "Em que direção o sol nasce e se põe em relação à área principal do projeto?",
-      "Quais áreas recebem sol pleno, sombra parcial ou sombra total, e isso muda entre verão e inverno?",
-      "Há sombreamento projetado por construções, muros ou árvores vizinhas que precise ser considerado?"
+      { "pt-BR": "Em que direção o sol nasce e se põe em relação à área principal do projeto?", "en": "In which direction does the sun rise and set relative to the main project area?", "es": "¿En qué dirección sale y se pone el sol en relación al área principal del proyecto?" },
+      { "pt-BR": "Quais áreas recebem sol pleno, sombra parcial ou sombra total, e isso muda entre verão e inverno?", "en": "Which areas receive full sun, partial shade, or full shade, and does this change between summer and winter?", "es": "¿Qué áreas reciben sol pleno, sombra parcial o sombra total, y esto cambia entre verano e invierno?" },
+      { "pt-BR": "Há sombreamento projetado por construções, muros ou árvores vizinhas que precise ser considerado?", "en": "Is there shading from buildings, walls, or neighboring trees that needs to be considered?", "es": "¿Hay sombreado proyectado por construcciones, muros o árboles vecinos que necesite ser considerado?" }
     ],
     "relatedPrincipleIds": [1, 7]
   },
   {
     "id": "water",
-    "name": "Água",
-    "description": "Para onde a água vai quando chove, onde ela se acumula, onde falta — o padrão que mais frequentemente determina o sucesso ou fracasso de um design.",
+    "name": { "pt-BR": "Água", "en": "Water", "es": "Agua" },
+    "description": { "pt-BR": "Para onde a água vai quando chove, onde ela se acumula, onde falta — o padrão que mais frequentemente determina o sucesso ou fracasso de um design.", "en": "Where water goes when it rains, where it accumulates, where it's lacking — the pattern that most often determines design success or failure.", "es": "Hacia dónde va el agua cuando llueve, dónde se acumula, dónde falta — el patrón que más frecuentemente determina el éxito o fracaso de un diseño." },
     "guidingQuestions": [
-      "Para onde escorre a água da chuva? Existem pontos baixos onde ela se acumula?",
-      "Há nascentes, córregos, poços ou corpos d'água próximos ao local?",
-      "Em que época do ano falta água, e em que época há excesso?",
-      "Existe alguma estrutura já feita para captar, deter ou infiltrar água no terreno?"
+      { "pt-BR": "Para onde escorre a água da chuva? Existem pontos baixos onde ela se acumula?", "en": "Where does rainwater run? Are there low points where it accumulates?", "es": "¿Hacia dónde escurre el agua de lluvia? ¿Existen puntos bajos donde se acumula?" },
+      { "pt-BR": "Há nascentes, córregos, poços ou corpos d'água próximos ao local?", "en": "Are there springs, streams, wells, or water bodies near the site?", "es": "¿Hay manantiales, arroyos, pozos o cuerpos de agua cerca del sitio?" },
+      { "pt-BR": "Em que época do ano falta água, e em que época há excesso?", "en": "At what time of year is water scarce, and when is there excess?", "es": "¿En qué época del año falta agua y en qué época hay exceso?" },
+      { "pt-BR": "Existe alguma estrutura já feita para captar, deter ou infiltrar água no terreno?", "en": "Are there existing structures for capturing, retaining, or infiltrating water on the land?", "es": "¿Existe alguna estructura ya hecha para captar, retener o infiltrar agua en el terreno?" }
     ],
     "relatedPrincipleIds": [1, 2, 5, 7]
   },
   {
     "id": "wind",
-    "name": "Vento",
-    "description": "Os ventos predominantes influenciam microclima, polinização, risco de incêndio e conforto térmico das construções.",
+    "name": { "pt-BR": "Vento", "en": "Wind", "es": "Viento" },
+    "description": { "pt-BR": "Os ventos predominantes influenciam microclima, polinização, risco de incêndio e conforto térmico das construções.", "en": "Prevailing winds influence microclimate, pollination, fire risk, and thermal comfort of buildings.", "es": "Los vientos predominantes influyen en el microclima, la polinización, el riesgo de incendio y el confort térmico de las construcciones." },
     "guidingQuestions": [
-      "De que direção vêm os ventos predominantes, e isso muda entre estações?",
-      "Existem ventos fortes ou frios que precisam de quebra-vento?",
-      "Há corredores de vento (entre construções, ao longo de vales) que concentram o fluxo de ar?"
+      { "pt-BR": "De que direção vêm os ventos predominantes, e isso muda entre estações?", "en": "From which direction do prevailing winds come, and does this change between seasons?", "es": "¿De qué dirección vienen los vientos predominantes, y esto cambia entre estaciones?" },
+      { "pt-BR": "Existem ventos fortes ou frios que precisam de quebra-vento?", "en": "Are there strong or cold winds that need windbreaks?", "es": "¿Existen vientos fuertes o fríos que necesiten cortavientos?" },
+      { "pt-BR": "Há corredores de vento (entre construções, ao longo de vales) que concentram o fluxo de ar?", "en": "Are there wind corridors (between buildings, along valleys) that concentrate airflow?", "es": "¿Hay corredores de viento (entre construcciones, a lo largo de valles) que concentren el flujo de aire?" }
     ],
     "relatedPrincipleIds": [1, 7]
   },
   {
     "id": "topography",
-    "name": "Topografia",
-    "description": "A forma do terreno — declividade, curvas de nível, pontos altos e baixos — condiciona onde a água, o ar frio e as pessoas naturalmente se movem.",
+    "name": { "pt-BR": "Topografia", "en": "Topography", "es": "Topografía" },
+    "description": { "pt-BR": "A forma do terreno — declividade, curvas de nível, pontos altos e baixos — condiciona onde a água, o ar frio e as pessoas naturalmente se movem.", "en": "The shape of the land — slope, contour lines, high and low points — determines where water, cold air, and people naturally move.", "es": "La forma del terreno — pendiente, curvas de nivel, puntos altos y bajos — condiciona dónde el agua, el aire frío y las personas se mueven naturalmente." },
     "guidingQuestions": [
-      "Qual é a declividade predominante do terreno, e em que direção ele desce?",
-      "Existem platôs, depressões, ravinas ou pontos notavelmente altos/baixos?",
-      "Onde o ar frio se acumula nas noites mais frias (bolsões de geada)?"
+      { "pt-BR": "Qual é a declividade predominante do terreno, e em que direção ele desce?", "en": "What is the predominant slope of the land, and in which direction does it descend?", "es": "¿Cuál es la pendiente predominante del terreno, y en qué dirección desciende?" },
+      { "pt-BR": "Existem platôs, depressões, ravinas ou pontos notavelmente altos/baixos?", "en": "Are there plateaus, depressions, ravines, or notably high/low points?", "es": "¿Existen mesetas, depresiones, barrancos o puntos notablemente altos/bajos?" },
+      { "pt-BR": "Onde o ar frio se acumula nas noites mais frias (bolsões de geada)?", "en": "Where does cold air accumulate on the coldest nights (frost pockets)?", "es": "¿Dónde se acumula el aire frío en las noches más frías (bolsas de helada)?" }
     ],
     "relatedPrincipleIds": [1, 7, 11]
   },
   {
     "id": "soil",
-    "name": "Solo",
-    "description": "Textura, estrutura, vida biológica e histórico de uso do solo — a base física de qualquer sistema produtivo.",
+    "name": { "pt-BR": "Solo", "en": "Soil", "es": "Suelo" },
+    "description": { "pt-BR": "Textura, estrutura, vida biológica e histórico de uso do solo — a base física de qualquer sistema produtivo.", "en": "Texture, structure, biological life, and land use history — the physical foundation of any productive system.", "es": "Textura, estructura, vida biológica e historial de uso del suelo — la base física de cualquier sistema productivo." },
     "guidingQuestions": [
-      "Qual é a textura predominante do solo (arenoso, argiloso, siltoso) nas diferentes áreas?",
-      "Há sinais de erosão, compactação ou solo exposto?",
-      "Qual foi o uso anterior da terra (agricultura convencional, pastagem, mata, construção)?",
-      "Existem indicadores biológicos visíveis (minhocas, fungos, cobertura vegetal espontânea)?"
+      { "pt-BR": "Qual é a textura predominante do solo (arenoso, argiloso, siltoso) nas diferentes áreas?", "en": "What is the predominant soil texture (sandy, clay, silty) in different areas?", "es": "¿Cuál es la textura predominante del suelo (arenoso, arcilloso, limoso) en las diferentes áreas?" },
+      { "pt-BR": "Há sinais de erosão, compactação ou solo exposto?", "en": "Are there signs of erosion, compaction, or exposed soil?", "es": "¿Hay signos de erosión, compactación o suelo expuesto?" },
+      { "pt-BR": "Qual foi o uso anterior da terra (agricultura convencional, pastagem, mata, construção)?", "en": "What was the previous land use (conventional agriculture, pasture, forest, construction)?", "es": "¿Cuál fue el uso anterior de la tierra (agricultura convencional, pastoreo, bosque, construcción)?" },
+      { "pt-BR": "Existem indicadores biológicos visíveis (minhocas, fungos, cobertura vegetal espontânea)?", "en": "Are there visible biological indicators (earthworms, fungi, spontaneous ground cover)?", "es": "¿Existen indicadores biológicos visibles (lombrices, hongos, cobertura vegetal espontánea)?" }
     ],
     "relatedPrincipleIds": [1, 5, 6, 10]
   },
   {
     "id": "vegetation",
-    "name": "Vegetação Existente",
-    "description": "As plantas já presentes no local contam a história do lugar e frequentemente devem ser preservadas e integradas, não removidas.",
+    "name": { "pt-BR": "Vegetação Existente", "en": "Existing Vegetation", "es": "Vegetación Existente" },
+    "description": { "pt-BR": "As plantas já presentes no local contam a história do lugar e frequentemente devem ser preservadas e integradas, não removidas.", "en": "Plants already present on site tell the story of the place and often should be preserved and integrated, not removed.", "es": "Las plantas ya presentes en el sitio cuentan la historia del lugar y frecuentemente deben ser preservadas e integradas, no removidas." },
     "guidingQuestions": [
-      "Quais espécies de árvores, arbustos ou plantas espontâneas já existem no local?",
-      "Há vegetação nativa remanescente que deveria ser protegida?",
-      "Existem árvores de grande porte cuja sombra, raízes ou queda de folhas influenciam o design?"
+      { "pt-BR": "Quais espécies de árvores, arbustos ou plantas espontâneas já existem no local?", "en": "What species of trees, shrubs, or spontaneous plants already exist on site?", "es": "¿Qué especies de árboles, arbustos o plantas espontáneas ya existen en el sitio?" },
+      { "pt-BR": "Há vegetação nativa remanescente que deveria ser protegida?", "en": "Is there remaining native vegetation that should be protected?", "es": "¿Hay vegetación nativa remanente que debería ser protegida?" },
+      { "pt-BR": "Existem árvores de grande porte cuja sombra, raízes ou queda de folhas influenciam o design?", "en": "Are there large trees whose shade, roots, or leaf fall influence the design?", "es": "¿Existen árboles de gran porte cuya sombra, raíces o caída de hojas influyen en el diseño?" }
     ],
     "relatedPrincipleIds": [1, 7, 10]
   },
   {
     "id": "wildlife",
-    "name": "Fauna",
-    "description": "Os animais silvestres e domésticos que já usam o local — aliados em potencial (polinizadores, predadores naturais) ou desafios a manejar.",
+    "name": { "pt-BR": "Fauna", "en": "Wildlife", "es": "Fauna" },
+    "description": { "pt-BR": "Os animais silvestres e domésticos que já usam o local — aliados em potencial (polinizadores, predadores naturais) ou desafios a manejar.", "en": "Wild and domestic animals already using the site — potential allies (pollinators, natural predators) or challenges to manage.", "es": "Los animales silvestres y domésticos que ya usan el sitio — aliados potenciales (polinizadores, depredadores naturales) o desafíos a manejar." },
     "guidingQuestions": [
-      "Que animais silvestres já foram observados no local (aves, insetos, mamíferos)?",
-      "Existem rotas de passagem de animais (corredores ecológicos) atravessando o terreno?",
-      "Há animais domésticos ou de criação que farão parte do sistema?"
+      { "pt-BR": "Que animais silvestres já foram observados no local (aves, insetos, mamíferos)?", "en": "What wild animals have been observed on site (birds, insects, mammals)?", "es": "¿Qué animales silvestres ya fueron observados en el sitio (aves, insectos, mamíferos)?" },
+      { "pt-BR": "Existem rotas de passagem de animais (corredores ecológicos) atravessando o terreno?", "en": "Are there animal passage routes (ecological corridors) crossing the land?", "es": "¿Existen rutas de paso de animales (corredores ecológicos) atravesando el terreno?" },
+      { "pt-BR": "Há animais domésticos ou de criação que farão parte do sistema?", "en": "Are there domestic or farm animals that will be part of the system?", "es": "¿Hay animales domésticos o de crianza que serán parte del sistema?" }
     ],
     "relatedPrincipleIds": [1, 8, 10]
   },
   {
     "id": "edges",
-    "name": "Bordas e Ecótonos",
-    "description": "As zonas de transição — entre floresta e clareira, entre água e terra, entre propriedades — costumam ser as mais produtivas e diversas do sistema.",
+    "name": { "pt-BR": "Bordas e Ecótonos", "en": "Edges and Ecotones", "es": "Bordes y Ecotonos" },
+    "description": { "pt-BR": "As zonas de transição — entre floresta e clareira, entre água e terra, entre propriedades — costumam ser as mais produtivas e diversas do sistema.", "en": "Transition zones — between forest and clearing, water and land, properties — are often the most productive and diverse parts of the system.", "es": "Las zonas de transición — entre bosque y claro, agua y tierra, propiedades — suelen ser las más productivas y diversas del sistema." },
     "guidingQuestions": [
-      "Onde estão as bordas naturais do local (transição floresta/campo, água/terra, sol/sombra)?",
-      "Essas bordas já são usadas de forma produtiva, ou estão negligenciadas?",
-      "Existem bordas administrativas (cercas, divisas) que também merecem virar bordas produtivas?"
+      { "pt-BR": "Onde estão as bordas naturais do local (transição floresta/campo, água/terra, sol/sombra)?", "en": "Where are the natural edges of the site (forest/field, water/land, sun/shade transitions)?", "es": "¿Dónde están los bordes naturales del sitio (transición bosque/campo, agua/tierra, sol/sombra)?" },
+      { "pt-BR": "Essas bordas já são usadas de forma produtiva, ou estão negligenciadas?", "en": "Are these edges already used productively, or are they neglected?", "es": "¿Estos bordes ya son usados de forma productiva, o están descuidados?" },
+      { "pt-BR": "Existem bordas administrativas (cercas, divisas) que também merecem virar bordas produtivas?", "en": "Are there administrative edges (fences, boundaries) that could also become productive edges?", "es": "¿Existen bordes administrativos (cercas, linderos) que también merecen convertirse en bordes productivos?" }
     ],
     "relatedPrincipleIds": [1, 7, 11]
   },
   {
     "id": "human-use",
-    "name": "Uso Humano Atual",
-    "description": "Como pessoas já se movem, trabalham e vivem no local hoje — o design regenerativo parte do que já funciona, não de uma folha em branco.",
+    "name": { "pt-BR": "Uso Humano Atual", "en": "Current Human Use", "es": "Uso Humano Actual" },
+    "description": { "pt-BR": "Como pessoas já se movem, trabalham e vivem no local hoje — o design regenerativo parte do que já funciona, não de uma folha em branco.", "en": "How people already move, work, and live on site today — regenerative design starts from what already works, not from a blank slate.", "es": "Cómo las personas ya se mueven, trabajan y viven en el sitio hoy — el diseño regenerativo parte de lo que ya funciona, no de una hoja en blanco." },
     "guidingQuestions": [
-      "Quais caminhos as pessoas já percorrem naturalmente no terreno?",
-      "Quais áreas já são usadas para convívio, trabalho, cultivo ou descanso?",
-      "Existem estruturas, infraestrutas ou instalações existentes que devem ser mantidas, adaptadas ou removidas?"
+      { "pt-BR": "Quais caminhos as pessoas já percorrem naturalmente no terreno?", "en": "What paths do people already naturally walk on the land?", "es": "¿Qué caminos recorren naturalmente las personas en el terreno?" },
+      { "pt-BR": "Quais áreas já são usadas para convívio, trabalho, cultivo ou descanso?", "en": "Which areas are already used for socializing, work, cultivation, or rest?", "es": "¿Qué áreas ya se usan para convivencia, trabajo, cultivo o descanso?" },
+      { "pt-BR": "Existem estruturas, infraestruturas ou instalações existentes que devem ser mantidas, adaptadas ou removidas?", "en": "Are there existing structures, infrastructure, or facilities that should be kept, adapted, or removed?", "es": "¿Existen estructuras, infraestructuras o instalaciones existentes que deben ser mantenidas, adaptadas o removidas?" }
     ],
     "relatedPrincipleIds": [1, 3, 8]
   }

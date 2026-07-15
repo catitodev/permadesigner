@@ -2,177 +2,404 @@
   {
     "id": "sadimet",
     "name": "SADIMET",
-    "subtitle": "O clássico circular da permacultura",
+    "subtitle": {
+      "pt-BR": "O clássico circular da permacultura",
+      "en": "The classic circular permaculture framework",
+      "es": "El clásico circular de la permacultura"
+    },
     "origin": "Arquitetura paisagística",
     "type": "Clássico",
     "linearity": "Circular",
-    "description": "O framework de design mais ensinado em cursos de Permacultura (PDCs) ao redor do mundo. Evolui do SADI (Survey, Analysis, Design, Implementation), da arquitetura paisagística, acrescentando manutenção, avaliação e ajuste.",
+    "description": {
+      "pt-BR": "O framework de design mais ensinado em cursos de Permacultura (PDCs) ao redor do mundo. Evolui do SADI (Survey, Analysis, Design, Implementation), da arquitetura paisagística, acrescentando manutenção, avaliação e ajuste.",
+      "en": "The most widely taught design framework in Permaculture Design Courses (PDCs) worldwide. Evolved from SADI (Survey, Analysis, Design, Implementation), from landscape architecture, adding maintenance, evaluation, and tweaking.",
+      "es": "El framework de diseño más enseñado en cursos de Permacultura (PDCs) alrededor del mundo. Evoluciona del SADI (Survey, Analysis, Design, Implementation), de la arquitectura paisajística, agregando mantenimiento, evaluación y ajuste."
+    },
     "sigla": [
-      { "letter": "S", "meaning": "Survey — Levantamento" },
-      { "letter": "A", "meaning": "Analysis — Análise" },
-      { "letter": "D", "meaning": "Decisions — Decisões (originalmente \"Design\")" },
-      { "letter": "I", "meaning": "Implementation — Implementação" },
-      { "letter": "M", "meaning": "Maintenance — Manutenção" },
-      { "letter": "E", "meaning": "Evaluation — Avaliação" },
-      { "letter": "T", "meaning": "Tweaking — Ajuste" }
+      {
+        "letter": "S",
+        "meaning": "Survey — Levantamento"
+      },
+      {
+        "letter": "A",
+        "meaning": "Analysis — Análise"
+      },
+      {
+        "letter": "D",
+        "meaning": "Decisions — Decisões (originalmente \"Design\")"
+      },
+      {
+        "letter": "I",
+        "meaning": "Implementation — Implementação"
+      },
+      {
+        "letter": "M",
+        "meaning": "Maintenance — Manutenção"
+      },
+      {
+        "letter": "E",
+        "meaning": "Evaluation — Avaliação"
+      },
+      {
+        "letter": "T",
+        "meaning": "Tweaking — Ajuste"
+      }
     ],
-    "stages": ["Survey", "Analysis", "Decisions", "Implementation", "Maintenance", "Evaluation", "Tweaking"],
+    "stages": [
+      "Survey",
+      "Analysis",
+      "Decisions",
+      "Implementation",
+      "Maintenance",
+      "Evaluation",
+      "Tweaking"
+    ],
     "bestFor": [
       "Projetos de terra e paisagem (sítios, chácaras, fazendas)",
       "Designers iniciantes que precisam de estrutura clara",
       "Relação cliente-designer mais tradicional",
       "Contextos que exigem documentação para relatórios/aprovações"
     ],
-    "special": "É circular, não linear: após o Tweaking, o processo retorna ao Survey. Reflete uma verdade central da permacultura — sistemas vivos não têm fim.",
+    "special": {
+      "pt-BR": "É circular, não linear: após o Tweaking, o processo retorna ao Survey. Reflete uma verdade central da permacultura — sistemas vivos não têm fim.",
+      "en": "It's circular, not linear: after Tweaking, the process returns to Survey. It reflects a central truth of permaculture — living systems have no end.",
+      "es": "Es circular, no lineal: después del Tweaking, el proceso retorna al Survey. Refleja una verdad central de la permacultura — los sistemas vivos no tienen fin."
+    },
     "sourceLicense": "Framework de ensino compartilhado em cursos de Permacultura (PDCs), sem licença Creative Commons unificada."
   },
   {
     "id": "obredimet",
     "name": "OBREDIMET",
-    "subtitle": "A evolução do clássico",
+    "subtitle": {
+      "pt-BR": "A evolução do clássico",
+      "en": "The evolution of the classic",
+      "es": "La evolución del clásico"
+    },
     "origin": "Engenharia + Permacultura",
     "type": "Clássico aprimorado",
     "linearity": "Circular",
-    "description": "Evolução do SADIMET que aprofunda as etapas iniciais, expandindo o \"Survey\" em observação abrangente e dividindo a análise em Fronteiras e Recursos. Tem contribuições de educadores como Andrew Langford, da Gaia University.",
+    "description": {
+      "pt-BR": "Evolução do SADIMET que aprofunda as etapas iniciais, expandindo o \"Survey\" em observação abrangente e dividindo a análise em Fronteiras e Recursos. Tem contribuições de educadores como Andrew Langford, da Gaia University.",
+      "en": "Evolution of SADIMET that deepens the initial stages, expanding 'Survey' into comprehensive observation and splitting analysis into Boundaries and Resources. Contributions from educators like Andrew Langford, of Gaia University.",
+      "es": "Evolución del SADIMET que profundiza las etapas iniciales, expandiendo el 'Survey' en observación integral y dividiendo el análisis en Fronteras y Recursos. Con contribuciones de educadores como Andrew Langford, de la Gaia University."
+    },
     "sigla": [
-      { "letter": "O", "meaning": "Observe — Observar" },
-      { "letter": "B", "meaning": "Boundaries — Fronteiras/Limites" },
-      { "letter": "R", "meaning": "Resources — Recursos" },
-      { "letter": "E", "meaning": "Evaluate — Avaliar" },
-      { "letter": "D", "meaning": "Decisions — Decisões" },
-      { "letter": "I", "meaning": "Implement — Implementar" },
-      { "letter": "M", "meaning": "Maintain — Manter" },
-      { "letter": "E", "meaning": "Re-evaluate — Reavaliar" },
-      { "letter": "T", "meaning": "Tweak — Ajustar" }
+      {
+        "letter": "O",
+        "meaning": "Observe — Observar"
+      },
+      {
+        "letter": "B",
+        "meaning": "Boundaries — Fronteiras/Limites"
+      },
+      {
+        "letter": "R",
+        "meaning": "Resources — Recursos"
+      },
+      {
+        "letter": "E",
+        "meaning": "Evaluate — Avaliar"
+      },
+      {
+        "letter": "D",
+        "meaning": "Decisions — Decisões"
+      },
+      {
+        "letter": "I",
+        "meaning": "Implement — Implementar"
+      },
+      {
+        "letter": "M",
+        "meaning": "Maintain — Manter"
+      },
+      {
+        "letter": "E",
+        "meaning": "Re-evaluate — Reavaliar"
+      },
+      {
+        "letter": "T",
+        "meaning": "Tweak — Ajustar"
+      }
     ],
-    "stages": ["Observe", "Boundaries", "Resources", "Evaluate", "Decisions", "Implement", "Maintain", "Re-evaluate", "Tweak"],
+    "stages": [
+      "Observe",
+      "Boundaries",
+      "Resources",
+      "Evaluate",
+      "Decisions",
+      "Implement",
+      "Maintain",
+      "Re-evaluate",
+      "Tweak"
+    ],
     "bestFor": [
       "Projetos complexos que exigem análise profunda antes da ação",
       "Estrutura mais robusta que o SADIMET básico",
       "Contextos onde as éticas precisam ser explicitamente integradas",
       "Projetos de grande escala (fazendas, comunidades, bioregiões)"
     ],
-    "special": "As fronteiras partem primeiro das três éticas da permacultura — Cuidado da Terra, Cuidado das Pessoas, Partilha Justa — só depois vêm clima, orçamento, legislação e outras limitações concretas.",
+    "special": {
+      "pt-BR": "As fronteiras partem primeiro das três éticas da permacultura — Cuidado da Terra, Cuidado das Pessoas, Partilha Justa — só depois vêm clima, orçamento, legislação e outras limitações concretas.",
+      "en": "Boundaries start from the three ethics of permaculture — Earth Care, People Care, Fair Share — only then come climate, budget, legislation and other concrete limitations.",
+      "es": "Las fronteras parten de las tres éticas de la permacultura — Cuidado de la Tierra, Cuidado de las Personas, Reparto Justo — solo después vienen clima, presupuesto, legislación y otras limitaciones concretas."
+    },
     "sourceLicense": "Framework de ensino compartilhado em cursos de Permacultura (PDCs), sem licença Creative Commons unificada."
   },
   {
     "id": "design_web",
     "name": "Design Web",
-    "subtitle": "A teia não-linear de Looby Macnamara",
+    "subtitle": {
+      "pt-BR": "A teia não-linear de Looby Macnamara",
+      "en": "Looby Macnamara's non-linear web",
+      "es": "La tela no lineal de Looby Macnamara"
+    },
     "origin": "Looby Macnamara",
     "type": "Emergente, não-linear",
     "linearity": "Não-linear",
-    "description": "Criado por Looby Macnamara, autora de People & Permaculture. Processos lineares funcionam bem para terra, mas falham com pessoas e culturas — o Design Web rompe com essa linearidade.",
+    "description": {
+      "pt-BR": "Criado por Looby Macnamara, autora de People & Permaculture. Processos lineares funcionam bem para terra, mas falham com pessoas e culturas — o Design Web rompe com essa linearidade.",
+      "en": "Created by Looby Macnamara, author of People & Permaculture. Linear processes work well for land, but fail with people and cultures — the Design Web breaks with that linearity.",
+      "es": "Creado por Looby Macnamara, autora de People & Permaculture. Los procesos lineales funcionan bien para la tierra, pero fallan con personas y culturas — el Design Web rompe con esa linealidad."
+    },
     "sigla": null,
-    "stages": ["Vision", "Limits", "Helps", "Patterns", "Ideas", "Principles", "Integration", "Action", "Momentum", "Appreciation", "Reflection", "Pause"],
+    "stages": [
+      "Vision",
+      "Limits",
+      "Helps",
+      "Patterns",
+      "Ideas",
+      "Principles",
+      "Integration",
+      "Action",
+      "Momentum",
+      "Appreciation",
+      "Reflection",
+      "Pause"
+    ],
     "bestFor": [
       "Designs focados em pessoas, comunidades e cultura",
       "Projetos em que a relação humana pesa tanto quanto a técnica",
       "Mudança comportamental e cultural",
       "Qualquer escala — de uma conversa de cozinha a um projeto internacional"
     ],
-    "special": "12 pontos de ancoragem em 4 fases (Crescimento, Exploração, Produtividade, Reflexão). Você visita os pontos na ordem que fizer sentido — uma dança entre designer, cliente e design, não uma sequência fixa.",
+    "special": {
+      "pt-BR": "12 pontos de ancoragem em 4 fases (Crescimento, Exploração, Produtividade, Reflexão). Você visita os pontos na ordem que fizer sentido — uma dança entre designer, cliente e design, não uma sequência fixa.",
+      "en": "12 anchor points in 4 phases (Growth, Exploration, Productivity, Reflection). You visit points in whatever order makes sense — a dance between designer, client, and design, not a fixed sequence.",
+      "es": "12 puntos de anclaje en 4 fases (Crecimiento, Exploración, Productividad, Reflexión). Visitas los puntos en el orden que tenga sentido — una danza entre diseñador, cliente y diseño, no una secuencia fija."
+    },
     "sourceLicense": "Looby Macnamara, em People & Permaculture e Design Adventures (Permanent Publications). © Looby Macnamara — sem licença Creative Commons formal identificada."
   },
   {
     "id": "dragon_dreaming",
     "name": "Dragon Dreaming",
-    "subtitle": "O design dos sonhos coletivos",
+    "subtitle": {
+      "pt-BR": "O design dos sonhos coletivos",
+      "en": "The design of collective dreams",
+      "es": "El diseño de los sueños colectivos"
+    },
     "origin": "John Croft / Gaia Foundation",
     "type": "Participativo, colaborativo",
     "linearity": "Cíclico (4 fases)",
-    "description": "Criado por John Croft e Vivienne Elanta por volta de 1990, na Gaia Foundation (Austrália Ocidental). Uma filosofia de vida que começa pelo sonho coletivo, não pelo plano técnico.",
+    "description": {
+      "pt-BR": "Criado por John Croft e Vivienne Elanta por volta de 1990, na Gaia Foundation (Austrália Ocidental). Uma filosofia de vida que começa pelo sonho coletivo, não pelo plano técnico.",
+      "en": "Created by John Croft and Vivienne Elanta around 1990, at the Gaia Foundation (Western Australia). A life philosophy that starts from the collective dream, not from the technical plan.",
+      "es": "Creado por John Croft y Vivienne Elanta alrededor de 1990, en la Gaia Foundation (Australia Occidental). Una filosofía de vida que comienza por el sueño colectivo, no por el plan técnico."
+    },
     "sigla": null,
-    "stages": ["Dreaming", "Planning", "Doing", "Celebrating"],
+    "stages": [
+      "Dreaming",
+      "Planning",
+      "Doing",
+      "Celebrating"
+    ],
     "bestFor": [
       "Projetos comunitários e de justiça social",
       "Iniciativas que dependem de engajamento profundo dos participantes",
       "Contextos onde o \"comando e controle\" tradicional já falhou",
       "Ecovilas, projetos de transição, cooperativas"
     ],
-    "special": "4 fases — Dreaming, Planning, Doing, Celebrating — com 16 estágios ao todo. O conceito central é a cultura Win-Win-Win: cada decisão deve beneficiar a pessoa, a comunidade e a Terra.",
+    "special": {
+      "pt-BR": "4 fases — Dreaming, Planning, Doing, Celebrating — com 16 estágios ao todo. O conceito central é a cultura Win-Win-Win: cada decisão deve beneficiar a pessoa, a comunidade e a Terra.",
+      "en": "4 phases — Dreaming, Planning, Doing, Celebrating — with 16 stages total. The central concept is Win-Win-Win culture: each decision must benefit the person, the community, and the Earth.",
+      "es": "4 fases — Soñar, Planificar, Hacer, Celebrar — con 16 etapas en total. El concepto central es la cultura Win-Win-Win: cada decisión debe beneficiar a la persona, la comunidad y la Tierra."
+    },
     "sourceLicense": "Fact sheets de John Croft sob CC BY-SA 3.0 Não Adaptada. Site dragondreaming.org sob CC BY-NC-SA 4.0."
   },
   {
     "id": "theory_u",
     "name": "Theory U",
-    "subtitle": "A consciência que molda o futuro emergente",
+    "subtitle": {
+      "pt-BR": "A consciência que molda o futuro emergente",
+      "en": "The consciousness that shapes the emerging future",
+      "es": "La conciencia que moldea el futuro emergente"
+    },
     "origin": "Otto Scharmer / MIT",
     "type": "Transformacional",
     "linearity": "Em \"U\"",
-    "description": "Desenvolvida por Otto Scharmer (MIT Sloan / Presencing Institute). Cada vez mais usada por designers regenerativos que trabalham mudança sistêmica em grande escala.",
+    "description": {
+      "pt-BR": "Desenvolvida por Otto Scharmer (MIT Sloan / Presencing Institute). Cada vez mais usada por designers regenerativos que trabalham mudança sistêmica em grande escala.",
+      "en": "Developed by Otto Scharmer (MIT Sloan / Presencing Institute). Increasingly used by regenerative designers working on large-scale systemic change.",
+      "es": "Desarrollada por Otto Scharmer (MIT Sloan / Presencing Institute). Cada vez más usada por diseñadores regenerativos que trabajan cambio sistémico a gran escala."
+    },
     "sigla": null,
-    "stages": ["Co-initiating", "Co-sensing", "Presencing", "Co-creating", "Co-evolving"],
+    "stages": [
+      "Co-initiating",
+      "Co-sensing",
+      "Presencing",
+      "Co-creating",
+      "Co-evolving"
+    ],
     "bestFor": [
       "Restauração de paisagens em grande escala (bioregiões, bacias)",
       "Projetos com múltiplos stakeholders (governo, comunidades, ONGs, empresas)",
       "Situações que pedem escuta profunda da terra e das comunidades antes de agir",
       "Mudança cultural e organizacional em instituições"
     ],
-    "special": "Jornada em forma de U com 5 movimentos. No fundo do U está o Presencing: o momento de deixar ir o ego antigo e abrir espaço para o que quer emergir.",
+    "special": {
+      "pt-BR": "Jornada em forma de U com 5 movimentos. No fundo do U está o Presencing: o momento de deixar ir o ego antigo e abrir espaço para o que quer emergir.",
+      "en": "U-shaped journey with 5 movements. At the bottom of the U is Presencing: the moment of letting go of the old ego and opening space for what wants to emerge.",
+      "es": "Viaje en forma de U con 5 movimientos. En el fondo de la U está el Presencing: el momento de soltar el ego antiguo y abrir espacio para lo que quiere emerger."
+    },
     "sourceLicense": "Materiais públicos do Presencing Institute / u-school (Otto Scharmer) sob CC BY-SA 3.0 Não Adaptada. Livros de Scharmer são publicações comerciais protegidas por direitos autorais."
   },
   {
     "id": "sadi_bredim",
     "name": "SADI & BREDIM",
-    "subtitle": "As raízes históricas",
+    "subtitle": {
+      "pt-BR": "As raízes históricas",
+      "en": "The historical roots",
+      "es": "Las raíces históricas"
+    },
     "origin": "Arquitetura / Engenharia",
     "type": "Histórico",
     "linearity": "Linear",
-    "description": "Antes do SADIMET ou OBREDIMET existirem, dois processos ancestrais influenciaram a permacultura: SADI (arquitetura paisagística) e BREDIM (engenharia industrial). Ambos são mais lineares.",
+    "description": {
+      "pt-BR": "Antes do SADIMET ou OBREDIMET existirem, dois processos ancestrais influenciaram a permacultura: SADI (arquitetura paisagística) e BREDIM (engenharia industrial). Ambos são mais lineares.",
+      "en": "Before SADIMET or OBREDIMET existed, two ancestral processes influenced permaculture: SADI (landscape architecture) and BREDIM (industrial engineering). Both are more linear.",
+      "es": "Antes de que existieran SADIMET u OBREDIMET, dos procesos ancestrales influenciaron la permacultura: SADI (arquitectura paisajística) y BREDIM (ingeniería industrial). Ambos son más lineales."
+    },
     "sigla": null,
-    "stages": ["Survey", "Analysis", "Design", "Implementation", "Boundaries", "Resources", "Evaluation", "Design", "Implementation", "Maintenance"],
+    "stages": [
+      "Survey",
+      "Analysis",
+      "Design",
+      "Implementation",
+      "Boundaries",
+      "Resources",
+      "Evaluation",
+      "Design",
+      "Implementation",
+      "Maintenance"
+    ],
     "bestFor": [
       "Hoje são sobretudo referência histórica",
       "Mostram de onde a permacultura tomou emprestadas suas ferramentas",
       "Ainda úteis em contextos técnicos ou regulatórios que exigem processo linear"
     ],
-    "special": "Mollison e Holmgren sintetizaram arquitetura paisagística, engenharia, ecologia e sistemas indígenas para criar a permacultura. SADI e BREDIM são essa ponte histórica.",
+    "special": {
+      "pt-BR": "Mollison e Holmgren sintetizaram arquitetura paisagística, engenharia, ecologia e sistemas indígenas para criar a permacultura. SADI e BREDIM são essa ponte histórica.",
+      "en": "Mollison and Holmgren synthesized landscape architecture, engineering, ecology, and indigenous systems to create permaculture. SADI and BREDIM are that historical bridge.",
+      "es": "Mollison y Holmgren sintetizaron arquitectura paisajística, ingeniería, ecología y sistemas indígenas para crear la permacultura. SADI y BREDIM son ese puente histórico."
+    },
     "sourceLicense": "Frameworks de ensino compartilhados em cursos de Permacultura (PDCs), sem licença Creative Commons unificada."
   },
   {
     "id": "cultural_emergence",
     "name": "Cultural Emergence",
-    "subtitle": "O toolkit de mudança cultural",
+    "subtitle": {
+      "pt-BR": "O toolkit de mudança cultural",
+      "en": "The cultural change toolkit",
+      "es": "El toolkit de cambio cultural"
+    },
     "origin": "Looby Macnamara + Jon Young",
     "type": "Cultural",
     "linearity": "Emergente",
-    "description": "Toolkit co-criado por Looby Macnamara e Jon Young (8 Shields Institute) em 2016, unindo design de permacultura à mudança cultural e comportamental.",
+    "description": {
+      "pt-BR": "Toolkit co-criado por Looby Macnamara e Jon Young (8 Shields Institute) em 2016, unindo design de permacultura à mudança cultural e comportamental.",
+      "en": "Toolkit co-created by Looby Macnamara and Jon Young (8 Shields Institute) in 2016, uniting permaculture design with cultural and behavioral change.",
+      "es": "Toolkit co-creado por Looby Macnamara y Jon Young (8 Shields Institute) en 2016, uniendo diseño de permacultura con cambio cultural y comportamental."
+    },
     "sigla": null,
-    "stages": ["Consciência sistêmica", "Conexão com a natureza", "Design regenerativo de culturas", "Mudança de comportamento"],
+    "stages": [
+      "Consciência sistêmica",
+      "Conexão com a natureza",
+      "Design regenerativo de culturas",
+      "Mudança de comportamento"
+    ],
     "bestFor": [
       "Ir além da terra e trabalhar com culturas humanas",
       "Projetos de transição comunitária",
       "Educação permacultural e formação de multiplicadores",
       "Comunidades que querem criar culturas regenerativas do zero"
     ],
-    "special": "Inclui o CEED Deck, um baralho de cartas de empoderamento e design. Parte da premissa de que a maior crise que enfrentamos é cultural, não técnica.",
+    "special": {
+      "pt-BR": "Inclui o CEED Deck, um baralho de cartas de empoderamento e design. Parte da premissa de que a maior crise que enfrentamos é cultural, não técnica.",
+      "en": "Includes the CEED Deck, a deck of empowerment and design cards. Starts from the premise that the greatest crisis we face is cultural, not technical.",
+      "es": "Incluye el CEED Deck, un mazo de cartas de empoderamiento y diseño. Parte de la premisa de que la mayor crisis que enfrentamos es cultural, no técnica."
+    },
     "sourceLicense": "Looby Macnamara e Jon Young (8 Shields Institute), em livro e no CEED Deck. © Looby Macnamara / 8 Shields Institute — sem licença Creative Commons formal identificada."
   },
   {
     "id": "gosadim",
     "name": "GoSADIM",
-    "subtitle": "A variante acadêmica",
+    "subtitle": {
+      "pt-BR": "A variante acadêmica",
+      "en": "The academic variant",
+      "es": "La variante académica"
+    },
     "origin": "Gaia University",
     "type": "Acadêmico",
     "linearity": "Linear-circular",
-    "description": "Variante do SADIMET desenvolvida na Gaia University, por educadores como Graham Burnett (Spiral Seed) e Andrew Langford, acrescentando Goals (Metas) no início do processo.",
+    "description": {
+      "pt-BR": "Variante do SADIMET desenvolvida na Gaia University, por educadores como Graham Burnett (Spiral Seed) e Andrew Langford, acrescentando Goals (Metas) no início do processo.",
+      "en": "Variant of SADIMET developed at Gaia University, by educators like Graham Burnett (Spiral Seed) and Andrew Langford, adding Goals at the beginning of the process.",
+      "es": "Variante del SADIMET desarrollada en la Gaia University, por educadores como Graham Burnett (Spiral Seed) y Andrew Langford, agregando Goals (Metas) al inicio del proceso."
+    },
     "sigla": [
-      { "letter": "Go", "meaning": "Goal articulation — Articulação de metas" },
-      { "letter": "S", "meaning": "Survey" },
-      { "letter": "A", "meaning": "Analyse" },
-      { "letter": "D", "meaning": "Decisions" },
-      { "letter": "I", "meaning": "Implement" },
-      { "letter": "M", "meaning": "Maintain" }
+      {
+        "letter": "Go",
+        "meaning": "Goal articulation — Articulação de metas"
+      },
+      {
+        "letter": "S",
+        "meaning": "Survey"
+      },
+      {
+        "letter": "A",
+        "meaning": "Analyse"
+      },
+      {
+        "letter": "D",
+        "meaning": "Decisions"
+      },
+      {
+        "letter": "I",
+        "meaning": "Implement"
+      },
+      {
+        "letter": "M",
+        "meaning": "Maintain"
+      }
     ],
-    "stages": ["Goal Articulation", "Survey", "Analyse", "Decisions", "Implement", "Maintain"],
+    "stages": [
+      "Goal Articulation",
+      "Survey",
+      "Analyse",
+      "Decisions",
+      "Implement",
+      "Maintain"
+    ],
     "bestFor": [
       "Contextos acadêmicos e de desenvolvimento profissional",
       "Projetos onde a clareza de objetivos é crítica",
       "Designers que trabalham com briefings de clientes",
       "Cursos e formações estruturadas"
     ],
-    "special": "\"Se você não tem um sonho, como vai ter um sonho realizado?\" — Graham Burnett resume o espírito da etapa inicial de articulação de metas.",
+    "special": {
+      "pt-BR": "\"Se você não tem um sonho, como vai ter um sonho realizado?\" — Graham Burnett resume o espírito da etapa inicial de articulação de metas.",
+      "en": "'If you don't have a dream, how can you have a dream come true?' — Graham Burnett summarizes the spirit of the initial goal articulation stage.",
+      "es": "'Si no tienes un sueño, ¿cómo puedes tener un sueño realizado?' — Graham Burnett resume el espíritu de la etapa inicial de articulación de metas."
+    },
     "sourceLicense": "Framework de ensino compartilhado em cursos de Permacultura (PDCs), sem licença Creative Commons unificada."
   }
 ]
