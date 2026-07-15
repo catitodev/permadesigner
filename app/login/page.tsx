@@ -66,28 +66,9 @@ export default function LoginPage() {
         {/* App identity */}
         <div className="space-y-3">
           <div
-            className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl"
-            style={{ backgroundColor: "var(--color-perma-green)" }}
+            className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl overflow-hidden"
           >
-            <svg
-              aria-hidden="true"
-              className="h-8 w-8 text-white"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3Z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 9.5C9 7.5 11 6 12 4c1 2 3 3.5 3 5.5a3 3 0 1 1-6 0Z"
-              />
-            </svg>
+            <img src="/icons/icon-192.png" alt="PermaDesigner" className="size-full" />
           </div>
 
           <h1 className="text-2xl font-bold tracking-tight text-foreground">

@@ -29,9 +29,9 @@ export default async function AppLayout({
   return (
     <div className="flex h-screen flex-col">
       <header className="flex shrink-0 items-center justify-between border-b px-4 py-2">
-        <div className="flex items-center gap-2">
-          <img src="/icons/icon-192.png" alt="PermaDesigner" className="size-7 rounded" />
-          <span className="text-sm font-semibold text-perma-green">PermaDesigner</span>
+        <div className="flex items-center gap-2.5">
+          <img src="/icons/icon-192.png" alt="" className="size-8 rounded-lg" />
+          <span className="text-sm font-bold tracking-tight text-foreground">PermaDesigner</span>
         </div>
         <UserMenu avatarUrl={avatarUrl} displayName={displayName} email={email} />
       </header>
