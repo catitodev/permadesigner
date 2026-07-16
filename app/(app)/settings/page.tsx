@@ -6,6 +6,7 @@ import { ThemeSelect } from "./theme-select";
 import { LocaleSelect } from "./locale-select";
 import { DriveToggle } from "./drive-toggle";
 import { DeleteAccountSection } from "./delete-account";
+import { InstallApp } from "./install-app";
 
 /**
  * Settings page — Básicas, Privacidade (link only), Exclusão.
@@ -36,6 +37,9 @@ export default async function SettingsPage() {
       <h1 className="mb-6 text-2xl font-bold text-perma-green">Configurações</h1>
 
       <div className="space-y-6">
+        {/* Install App (mobile only) */}
+        <InstallApp />
+
         {/* Básicas */}
         <Card className="border-perma-green/20">
           <CardHeader>
