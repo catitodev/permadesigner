@@ -36,7 +36,7 @@ export default async function AppLayout({
         </Link>
         <UserMenu avatarUrl={avatarUrl} displayName={displayName} email={email} />
       </header>
-      <main className="min-h-0 flex-1 overflow-hidden">{children}</main>
+      <main className="min-h-0 flex-1 overflow-auto">{children}</main>
       <Footer />
       <OfflineIndicator />
     </div>

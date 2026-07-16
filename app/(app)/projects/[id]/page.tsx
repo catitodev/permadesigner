@@ -27,13 +27,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   // Fetch project (RLS ensures only owner can access)
   const { data: project, error } = await supabase
     .from("projects")
-    .select("id, name, current_stage_id, completeness_status, updated_at, navigation_mode")
+    .select("id, name, current_stage_id, completeness_status, updated_at")
     .eq("id", id)
     .single();
 
   if (error || !project) {
     notFound();
   }
+
+  // Fetch navigation_mode separately (column may not exist if migration not run)
+  const { data: modeData } = await supabase
+    .from("projects")
+    .select("navigation_mode")
+    .eq("id", id)
+    .single();
+
+  const navigationMode = (modeData?.navigation_mode as "student" | "designer") ?? "student";
 
   // Restore conversation history for the project
   const { data: rawMessages } = await supabase
@@ -79,7 +88,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const currentStageId = project.current_stage_id ?? DEFAULT_STAGES[0].id;
 
   return (
-    <div className="flex h-full flex-col px-2 py-2 sm:px-4 sm:py-3">
+    <div className="flex h-full flex-col overflow-hidden px-2 py-2 sm:px-4 sm:py-3">
       {/* Header */}
       <div className="mb-2 flex shrink-0 items-center gap-3">
         <Link href="/dashboard">
@@ -92,7 +101,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {project.name}
           </h1>
         </div>
-        <ModeSelector projectId={id} currentMode={(project.navigation_mode as "student" | "designer") ?? "student"} />
+        <ModeSelector projectId={id} currentMode={navigationMode} />
       </div>
 
       {/* Chat interface takes remaining height */}

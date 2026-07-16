@@ -21,12 +21,12 @@ export default async function DashboardPage() {
 
   const { data: projects } = await supabase
     .from("projects")
-    .select("id, name, completeness_status, updated_at, current_stage_id, navigation_mode")
+    .select("id, name, completeness_status, updated_at, current_stage_id")
     .eq("user_id", user!.id)
     .order("updated_at", { ascending: false });
 
   return (
-    <div className="mx-auto w-full max-w-4xl overflow-auto px-4 py-8">
+    <div className="mx-auto w-full max-w-4xl px-4 py-8">
       {/* Mode explainer cards */}
       <div className="mb-8">
         <h2 className="mb-3 text-sm font-semibold text-muted-foreground uppercase tracking-wide">Modos de navegação</h2>
@@ -77,12 +77,7 @@ export default async function DashboardPage() {
             >
               <Card className="h-full border-perma-green/10 transition-shadow group-hover:ring-2 group-hover:ring-perma-green/20">
                 <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-base">{project.name}</CardTitle>
-                    <span className="text-xs">
-                      {project.navigation_mode === "designer" ? "🛠️" : "🎓"}
-                    </span>
-                  </div>
+                  <CardTitle className="text-base">{project.name}</CardTitle>
                   <CardDescription>
                     Atualizado em{" "}
                     {new Date(project.updated_at).toLocaleDateString("pt-BR", {
