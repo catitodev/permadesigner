@@ -26,12 +26,14 @@ export class WebSpeechProvider implements VoiceProvider {
       return;
     }
 
-    const enabled = process.env.NEXT_PUBLIC_VOICE_ENABLED === "true";
+    // Voice is available if browser supports it.
+    // The env flag acts as a kill switch (if explicitly "false", disable).
+    const killSwitch = process.env.NEXT_PUBLIC_VOICE_ENABLED === "false";
     const SpeechRecognitionClass =
       (window as any).SpeechRecognition ?? (window as any).webkitSpeechRecognition;
     const hasSynthesis = "speechSynthesis" in window;
 
-    this._available = enabled && !!SpeechRecognitionClass && hasSynthesis;
+    this._available = !killSwitch && !!SpeechRecognitionClass && hasSynthesis;
 
     if (this._available) {
       this.recognition = new SpeechRecognitionClass();
