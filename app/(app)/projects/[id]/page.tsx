@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "lucide-react";
 import { DEFAULT_STAGES } from "@/modules/conversation-wizard";
 import { ChatInterface } from "@/modules/conversation-wizard/components/chat-interface";
+import { ModeSelector } from "@/modules/conversation-wizard/components/mode-selector";
 import type { ChatMessageData } from "@/modules/conversation-wizard/components/chat-message";
 import type { StageInfo } from "@/modules/conversation-wizard/components/stage-navigation";
 import type { GroundingRef } from "@/modules/conversation-wizard/components/grounding-badge";
@@ -26,7 +27,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   // Fetch project (RLS ensures only owner can access)
   const { data: project, error } = await supabase
     .from("projects")
-    .select("id, name, current_stage_id, completeness_status, updated_at")
+    .select("id, name, current_stage_id, completeness_status, updated_at, navigation_mode")
     .eq("id", id)
     .single();
 
@@ -91,6 +92,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {project.name}
           </h1>
         </div>
+        <ModeSelector projectId={id} currentMode={(project.navigation_mode as "student" | "designer") ?? "student"} />
       </div>
 
       {/* Chat interface takes remaining height */}

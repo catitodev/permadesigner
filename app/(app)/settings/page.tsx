@@ -1,11 +1,15 @@
+import Link from "next/link";
 import { createServerClient } from "@/lib/supabase/server";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { ThemeSelect } from "./theme-select";
+import { LocaleSelect } from "./locale-select";
+import { DriveToggle } from "./drive-toggle";
 import { DeleteAccountSection } from "./delete-account";
 
 /**
- * Settings page — three sections: Básicas, Privacidade/LGPD, Exclusão.
- * Req: AP-4
+ * Settings page — Básicas, Privacidade (link only), Exclusão.
+ * Uses PermaBrasilis brand tokens.
  */
 export default async function SettingsPage() {
   const supabase = await createServerClient();
@@ -15,59 +19,52 @@ export default async function SettingsPage() {
 
   const { data: profile } = await supabase
     .from("users")
-    .select("theme_preference")
+    .select("theme_preference, locale")
     .eq("id", user!.id)
+    .single();
+
+  // Check if Drive is connected
+  const { data: driveIntegration } = await supabase
+    .from("user_integrations")
+    .select("id")
+    .eq("user_id", user!.id)
+    .eq("provider", "google-drive")
     .single();
 
   return (
     <div className="mx-auto w-full max-w-2xl overflow-auto px-4 py-8">
-      <h1 className="mb-6 text-2xl font-bold">Configurações</h1>
+      <h1 className="mb-6 text-2xl font-bold text-perma-green">Configurações</h1>
 
       <div className="space-y-6">
         {/* Básicas */}
-        <Card>
+        <Card className="border-perma-green/20">
           <CardHeader>
-            <CardTitle>Básicas</CardTitle>
+            <CardTitle className="text-perma-green">Básicas</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-5">
             <ThemeSelect currentTheme={profile?.theme_preference ?? "system"} />
-            <div className="text-sm text-muted-foreground">
-              Idioma e Google Drive estarão disponíveis em breve.
-            </div>
+            <LocaleSelect currentLocale={profile?.locale ?? "pt-BR"} />
+            <DriveToggle connected={!!driveIntegration} />
           </CardContent>
         </Card>
 
-        {/* Privacidade e LGPD */}
-        <Card>
+        {/* Privacidade — apenas link, sem duplicar conteúdo */}
+        <Card className="border-perma-teal/20">
           <CardHeader>
-            <CardTitle>Privacidade e LGPD</CardTitle>
-            <CardDescription>Seus direitos conforme a Lei 13.709/2018</CardDescription>
+            <CardTitle className="text-perma-teal">Privacidade e dados</CardTitle>
+            <CardDescription>Gerencie seus dados conforme a LGPD</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-3 text-sm">
-            <p>Coletamos apenas os dados necessários para o funcionamento do app:</p>
-            <ul className="ml-4 list-disc space-y-1 text-muted-foreground">
-              <li>Email e nome (via Google)</li>
-              <li>Respostas do processo de design</li>
-              <li>Fotos anexadas aos projetos</li>
-              <li>Preferências (tema, idioma)</li>
-            </ul>
-            <p className="font-medium mt-3">Seus direitos:</p>
-            <ul className="ml-4 list-disc space-y-1 text-muted-foreground">
-              <li>Confirmação de tratamento de dados</li>
-              <li>Acesso aos seus dados</li>
-              <li>Correção de dados incompletos</li>
-              <li>Anonimização ou eliminação</li>
-              <li>Portabilidade (exportação)</li>
-              <li>Revogação de consentimento</li>
-            </ul>
-            <div className="pt-3">
-              <a
-                href="/api/user/export"
-                className="inline-flex rounded-md border border-border px-3 py-2 text-sm font-medium hover:bg-accent transition-colors"
-              >
+          <CardContent className="flex flex-wrap gap-3">
+            <Link href="/privacidade">
+              <Button variant="outline" className="border-perma-teal/30 hover:bg-perma-teal/5">
+                Ver Política de Privacidade
+              </Button>
+            </Link>
+            <a href="/api/user/export">
+              <Button variant="outline" className="border-perma-teal/30 hover:bg-perma-teal/5">
                 Exportar todos os meus dados
-              </a>
-            </div>
+              </Button>
+            </a>
           </CardContent>
         </Card>
 
