@@ -297,51 +297,60 @@ export function ChatInterface({
       {/* Input area */}
       <div className="shrink-0 border-t border-border bg-background px-3 py-3 sm:px-4">
         <div className="flex items-center gap-2">
-          {/* Voice button — only shown when browser supports it */}
-          {voiceAvailable && (
-            <Button
-              type="button"
-              variant="ghost"
-              size="icon"
-              className={`shrink-0 ${
-                voiceState === "listening"
-                  ? "text-red-500 animate-pulse"
-                  : voiceState === "processing"
-                    ? "text-amber-500"
-                    : ""
-              }`}
-              disabled={isLoading}
-              onClick={async () => {
-                if (voiceState === "listening") {
-                  stopListening();
-                  return;
+          {/* Voice button — always visible, handles unsupported gracefully */}
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon"
+            className={`shrink-0 ${
+              voiceState === "listening"
+                ? "text-red-500 animate-pulse"
+                : voiceState === "processing"
+                  ? "text-amber-500"
+                  : ""
+            }`}
+            disabled={isLoading}
+            onClick={async () => {
+              if (!voiceAvailable) {
+                // Show friendly message for unsupported browsers
+                const noSupportMsg: ChatMessageData = {
+                  id: `voice-unsupported-${Date.now()}`,
+                  role: "assistant",
+                  content: "🎙️ Seu navegador não suporta entrada por voz. Use Chrome ou Edge para essa funcionalidade.",
+                  createdAt: new Date().toISOString(),
+                };
+                setMessages((prev) => [...prev, noSupportMsg]);
+                return;
+              }
+              if (voiceState === "listening") {
+                stopListening();
+                return;
+              }
+              stopSpeaking();
+              try {
+                const transcript = await startListening();
+                if (transcript) {
+                  sendMessage(transcript);
                 }
-                stopSpeaking(); // Stop TTS if running
-                try {
-                  const transcript = await startListening();
-                  if (transcript) {
-                    sendMessage(transcript);
-                  }
-                } catch {
-                  // Error is already set in voiceError state
-                }
-              }}
-              aria-label={
-                voiceState === "listening"
-                  ? "Parar de ouvir"
+              } catch {
+                // Error already set in voiceError
+              }
+            }}
+            aria-label={
+              voiceState === "listening"
+                ? "Parar de ouvir"
+                : "Falar uma mensagem"
+            }
+            title={
+              voiceState === "listening"
+                ? "Ouvindo... clique para parar"
+                : voiceState === "processing"
+                  ? "Processando..."
                   : "Falar uma mensagem"
-              }
-              title={
-                voiceState === "listening"
-                  ? "Ouvindo... clique para parar"
-                  : voiceState === "processing"
-                    ? "Processando..."
-                    : "Falar uma mensagem"
-              }
-            >
-              <MicIcon />
-            </Button>
-          )}
+            }
+          >
+            <MicIcon />
+          </Button>
 
           <Input
             ref={inputRef}
